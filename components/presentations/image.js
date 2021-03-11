@@ -1,4 +1,4 @@
-// import styles from '../../styles//img.module.css'
+import styles from '../../styles//img.module.css'
 export default function Image(props){
     return(
         <div>

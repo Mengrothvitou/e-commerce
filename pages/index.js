@@ -11,23 +11,7 @@ export default function Home() {
             src="/home.jpeg"
             className={styles.imgHome}
           />
-          <h1 className={styles.h1}>Welcome to Eunoir Online shop</h1>
-          <div className={styles.img}>
-            <Image
-            src="/bags.jpeg"
-            className={styles.imgBags}/>
-            <Image
-            src="/shirt.jpeg"
-            className={styles.imgShirt}/>
-            <Image
-            src="/wallet.jpeg"
-            className={styles.imgWallet}
-            />
-            <Image
-            src="/shoe.jpeg"
-            className={styles.imgShoe}
-            />
-          </div>
+          <h1>Hello</h1>
      </div>
     )
   }

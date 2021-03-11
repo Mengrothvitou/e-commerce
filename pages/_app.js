@@ -1,19 +1,19 @@
 export default MyApp
-import Header from '../components/containers/header'
+import Header from '../components/containers/header';
 import '../styles/globals.css'
-import Nav from '../components/containers/nav'
-import Footer from '../components/containers/footer'
+import Navbar from '../components/containers/nav'
 import Layout from  './../components/containers/layout'
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div>
       <Header/>
-      <Nav/>
-      <Layout>          <Component {...pageProps}/>
+      <Navbar/>
+      <Layout>          
+        <Component {...pageProps}/>
       </Layout>
       
       
-     </> 
+    </div> 
   )
   
 }
