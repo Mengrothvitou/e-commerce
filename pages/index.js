@@ -9,16 +9,14 @@ export default function Home() {
         <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="home.jpeg" className="d-block w-100" alt="..."/>
+              <img src="home.jpeg" className="d-block w-100 img-fluid" alt="..."/>
             </div>
             <div className="carousel-item">
-              <img src="home1.png" className="d-block w-100" alt="..."/>
-            </div>
-            <div className="carousel-item">
-              <img src="home1.jpeg" className="d-block w-100" alt="..."/>
+              <img src="home1.jpeg" className="d-block w-100 img-fluid" alt="..."/>
             </div>
           </div>
         </div>
+        <p className={styles.header}>Welcome to Next Store Fashion</p>
      </div>
     )
   }

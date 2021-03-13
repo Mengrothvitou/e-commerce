@@ -1,0 +1,70 @@
+.container{
+    background-color:  #FFE9E9;
+    width: 100%;
+    height: 500px;
+}
+@media only screen and (max-width: 732px){
+    .container{
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .container{
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 432px){
+    .container{
+        height: 200px;
+    }
+}
+.square1{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 200px;
+    top: 470px;
+
+    background: #FF7373;
+    transform: rotate(-52.11deg);
+}
+.img{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 290px;
+    top: 440px;
+    transform: rotate(37.79deg);
+}
+@media only screen and (max-width: 600px){
+    .square1{
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        left: 40px;
+        top: 280px;
+    }
+    .img{
+        position: absolute;
+        width: 125px;
+        height: 125px;
+        left: 90px;
+        top: 260px;
+    }
+}
+@media only screen and (max-width: 732px){
+    .square1{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 40px;
+        top: 380px;
+    }
+    .img{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        left: 90px;
+        top: 360px;
+    }
+}
