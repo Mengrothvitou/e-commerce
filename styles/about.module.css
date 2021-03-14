@@ -52,7 +52,23 @@
         top: 260px;
     }
 }
-@media only screen and (max-width: 732px){
+@media only screen and (max-width: 3n00px){
+    .square1{
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        left: 40px;
+        top: 250px;
+    }
+    .img{
+        position: absolute;
+        width: 125px;
+        height: 125px;
+        left: 90px;
+        top: 260px;
+    }
+}
+@media only screen and (max-width: 762px){
     .square1{
         position: absolute;
         width: 100px;

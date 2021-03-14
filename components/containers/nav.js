@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import styles from '../../styles/nav.module.css'
 export default function Navbar(){
     return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Next Store Fashion</a>
+                    <a className="navbar-brand" href="#">Next Store</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
@@ -15,13 +16,15 @@ export default function Navbar(){
                         </li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Collections
+                            Products
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Clothes</a></li>
                             <li><a class="dropdown-item" href="/shoe">Shoes</a></li>
                             <li><a class="dropdown-item" href="/books">Books</a></li>
                             <li><a class="dropdown-item" href="/bag">Bags</a></li>
+                            <li><a class="dropdown-item" href="/cosmetic">Cosmetics</a></li>
+                            <li><a class="dropdown-item" href="/wactches">Watches</a></li>
                         </ul>
                         </li>
                         <li className="nav-item">
@@ -35,9 +38,9 @@ export default function Navbar(){
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                         <button className="btn btn-outline-success" type="submit">Search</button>
                     </form>
-                    <button type="button" className="btn btn-outline-primary ml-auto m-2">Sign In</button>
+                    <button type="button" className="btn btn-outline-primary ">Sign In</button>
+                    <button type="button" className="btn btn-outline-primary ">Add to Cart</button>
                     </div>
-
                 </div>
             </nav>
         </div>
