@@ -3,7 +3,6 @@
   margin: 0px;
 }
 .container {
-  min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -53,7 +52,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 0px;
 }
 
 .title,
@@ -96,23 +95,16 @@
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
 .card h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
 
-.card p {
+/* .card p {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-}
+} */
 
 .logo {
   height: 1em;
@@ -128,6 +120,114 @@
   margin-bottom: 100px;
 }
 /* Home */
-.carousel-item{
+.main-heading{
+  text-align: center;
+  margin: 20px;
+  font-size: 50px;
+  font-family: 'Rationale', sans-serif;
+}
+.card{
+  width: 18rem;
+  display: block;
+  margin-right: 20px;
+  margin-left: 29.5px;
+  margin-bottom: 20px;
+  border: 0px;
+
+}
+img{
+  width: 15rem;
+  height: 14rem;
+  border: 2px solid black   ;
+
+}
+.card-title{
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Rationale', sans-serif;
+}
+@media screen and (max-width: 992px) {
+  .col-4 {
+    width: 50%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .col-4 {
+    width: 100%;
+    justify-content: center;
+  }
+  .card-title{
+    font-size: 25px;
+  }
+  .main-heading{
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .main-heading {
+    font-size: 40px;
+  }
+}
+
+
+
+
+
+/* Footer */
+.footer{
+  margin-top: 160px;
+  width: 100%;
+}
+.text-center  {
+  width: 100%;
+  height: 450px;
+  color: white;
+  background-color: black;
+}
+.col-lg-3{
+  width: 600px;
+  padding-left: 100px;
+  padding-top: 10px;
+}
+.text-case {
+  font-size: 30px;
+  font-family: 'Rationale', sans-serif;
+  padding-bottom: 30px;
+}
+.text-light{
+  font-size: 25px;
+  font-family: 'Rationale',sans-serif;
+  letter-spacing: 1px;
+}
+.fa{
+  float: left;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  justify-content:  center;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+.social{
+  width: 500px;
+  padding-bottom: 60px;
   
+}
+.text-contact{
+  font-family: 'Rationale',sans-serif;
+  font-size: 30px;
+}
+.tel{
+  font-family: 'Rationale',sans-serif;
+  color: white;
+  font-size: 30px;
+}
+.Copyright{
+  font-size: 24px;
+  font-family: 'Rationale', sans-serif;
+  letter-spacing: 1px;
 }

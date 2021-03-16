@@ -17,32 +17,32 @@ export default function Home() {
           </div>
         </div>
         <div className="container-fluid">
-          <h1 className={styles.header}>Welcome to Our Store</h1>
+          <h1 className="main-heading">Welcome to Our Store</h1>
           {/* Cosmetic */}
             <div className="row">
-            <h2 className={styles.titleCosmetic}>Cosmetic</h2>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="cosmetic2.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText1}>BB Cream</p>
+              <h2 className={styles.titleCosmetic}>Cosmetic</h2>
+                <div className="card">
+                  <img src="cosmetic2.jpeg"></img>
+                  <p className="card-title">BB Cream</p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="cosmetic3.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText1}>Lipstick innerfree </p>
+                <div className="card">
+                  <img src="cosmetic3.jpeg"></img>
+                  <p className="card-title">Lipstick innerfree </p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="cosmetic1.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText1}>Eyelinner innisfree </p>
+                <div className="card">
+                  <img src="cosmetic1.jpeg"></img>
+                  <p className="card-title">Eyelinner innisfree </p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="cosmetic4.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText1}>
+                <div className="card">
+                  <img src="cosmetic4.jpeg"></img>
+                  <p className="card-title">
                     Sleeping mask innisfree
                   </p>
                 </div>
@@ -52,27 +52,27 @@ export default function Home() {
           <div className="row">
             <h2 className={styles.titleClothes}>Clothes</h2>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="shirt.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText2}>Domnork</p>
+                <div className="card">
+                  <img src="shirt.jpeg"></img>
+                  <p className="card-title">Domnork</p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="clothe1.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText2}>T-shirt</p>
+                <div className="card">
+                  <img src="clothe1.jpeg"></img>
+                  <p className="card-title">T-shirt</p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="clothe3.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText2}>Addidas Hoody</p>
+                <div className="card">
+                  <img src="clothe3.jpeg"></img>
+                  <p className="card-title">Addidas Hoody</p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="clothe4.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText2}>
+                <div className="card">
+                  <img src="clothe4.jpeg"></img>
+                  <p className="card-title">
                     Sweater
                   </p>
                 </div>
@@ -82,27 +82,27 @@ export default function Home() {
             <div className="row">
             <h2 className={styles.titleWatches}>Watches</h2>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="watch1.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText3}>PU Banteay Srei</p>
+                <div className="card">
+                  <img src="watch1.jpeg"></img>
+                  <p className="card-title">PU Banteay Srei</p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="watch2.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText3}>Tissot 1853</p>
+                <div className="card">
+                  <img src="watch2.jpeg"></img>
+                  <p className="card-title">Tissot 1853</p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="watch3.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText3}>Omega Sa 1969 </p>
+                <div className="card">
+                  <img src="watch3.jpeg"></img>
+                  <p className="card-title">Omega Sa 1969 </p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="watch5.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText3}>
+                <div className="card">
+                  <img src="watch5.jpeg"></img>
+                  <p className="card-title">
                     PU Oyster Engrave 
                   </p>
                 </div>
@@ -112,27 +112,27 @@ export default function Home() {
             <div className="row">
             <h2 className={styles.titleOthers}>Others...</h2>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="other1.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText4}>Shoes</p>
+                <div className="card">
+                  <img src="other1.jpeg"></img>
+                  <p className="card-title">Shoes</p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="other2.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText4}>Perfume</p>
+                <div className="card">
+                  <img src="other2.jpeg"></img>
+                  <p className="card-title">Perfume</p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="other3.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText4}>Bags</p>
+                <div className="card">
+                  <img src="other3.jpeg"></img>
+                  <p className="card-title">Bags</p>
                 </div>
               </div>
               <div className="col-4-lg">
-                <div className={styles.card}>
-                  <img src="other4.jpeg" className={styles.img}></img>
-                  <p className={styles.imgText4}>
+                <div className="card">
+                  <img src="other4.jpeg"></img>
+                  <p className="card-title">
                  Purse
                   </p>
                 </div>

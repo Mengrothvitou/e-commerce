@@ -3,7 +3,8 @@ import Head from 'next/head';
 import '../styles/globals.css'
 import Navbar from '../components/containers/nav'
 import Layout from  './../components/containers/layout'
-import Footer from '../components/containers/footer'
+import Footer from '../pages/footer'
+
 function MyApp({ Component, pageProps }) {
   return (
     <div>
@@ -17,18 +18,17 @@ function MyApp({ Component, pageProps }) {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com"/>
-        <link rel="stylesheet" href="fonts/font-awesome.css"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Neuton:wght@700&family=Rationale&display=swap" rel="stylesheet"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Rationale&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
       </Head>
       <Navbar/>
       <Layout>          
         <Component {...pageProps}/>
-        <Footer/>
       </Layout>
+      <Footer/>
       
       
     </div> 

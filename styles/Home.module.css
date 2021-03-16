@@ -12,75 +12,42 @@
     position: absolute;
     width: 100px;
     height: 28px;
-    left: 15px;
-    top: 880px;
-    display: inline-block;
-    margin-bottom: 10px;
-    font-family: 'Rationale', sans-serif;
-    font-size: 30px;
-    line-height: 28px;
-    letter-spacing: 0.1em;
-    color: #000000;
-}
-.card{
-    display: block;
-    margin-left: 16px;
-    margin-right: 15px;
-    margin-bottom: 100px;
-}
-.img{
-    width: 288px;
-    height: 300px;
-    border: 1px solid black;
-    
-}
-.imgText1{
-    position: absolute;
-    width: 288px;
-    text-align: center;
-    height: 12px;
-    margin-top: 16px;
-    top: 1220px;
-    font-family: 'Rationale', sans-serif;;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    color: #000000;
-}
-.titleClothes{
-    position: absolute;
-    width: 100px;
-    height: 28px;
-    left: 15px;
-    top: 1265px;
+    left: 28px;
+    top: 920px;
     display: inline-block;
     margin-top: 16px;
     margin-bottom: 16px;
     font-family: 'Rationale', sans-serif;
     font-size: 30px;
     line-height: 28px;
-    letter-spacing: 0.1em;
+    letter-spacing: 3px;
     color: #000000;
+    z-index: 102;
 }
-.imgText2{
+
+.titleClothes{
     position: absolute;
-    width: 288px;
-    height: 12px;
+    width: 100px;
+    height: 28px;
+    left: 28px;
+    top: 1280px;
+    display: inline-block;
     margin-top: 16px;
-    top: 1615px;
-    text-align: center;
-    font-family: 'Rationale', sans-serif;;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
+    margin-bottom: 16px;
+    font-family: 'Rationale', sans-serif;
+    font-size: 30px;
+    line-height: 28px;
+    letter-spacing: 3px;
     color: #000000;
+    z-index: 102;
 }
+
 .titleWatches{
     position: absolute;
     width: 100px;
     height: 28px;
-    left: 15px;
-    top: 1680px;
+    left: 28px;
+    top: 1750px;
     display: inline-block;
     margin-bottom: 10px;
     font-family: 'Rationale', sans-serif;
@@ -88,44 +55,71 @@
     line-height: 28px;
     letter-spacing: 0.1em;
     color: #000000;
+    z-index: 102;
 }
-.imgText3{
-    position: absolute;
-    width: 288px;
-    text-align: center;
-    height: 12px;
-    margin-top: 16px;
-    top: 2020px;
-    font-family: 'Rationale', sans-serif;;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    color: #000000;
-}
+
 .titleOthers{
     position: absolute;
     width: 100px;
     height: 28px;
-    left: 15px;
-    top:2080px;
+    left: 28px;
+    top: 2135px;
     display: inline-block;
     margin-bottom: 10px;
     font-family: 'Rationale', sans-serif;
     font-size: 30px;
     line-height: 28px;
-    letter-spacing: 0.1em;
+    letter-spacing: 3px;
     color: #000000;
+    z-index: 102;
 }
-.imgText4{
-    position: absolute;
-    width: 288px;
-    text-align: center;
-    height: 12px;
-    margin-top: 16px;
-    top: 2420px;
-    font-family: 'Rationale', sans-serif;;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    color: #000000;
-}
+@media screen and (max-width: 600px) {
+    .titleCosmetic,.titleClothes,.titleWatches,.titleOthers {
+      left: 28px;
+    }
+    .titleCosmetic{
+        font-size: 25px;
+        top: 325px;
+        letter-spacing: 2px;
+    }
+    .titleClothes{
+        font-size: 25px;
+        top: 1835px;
+        letter-spacing: 2px;
+    }
+    .titleWatches{
+        font-size: 25px;
+        top: 3355px;
+        letter-spacing: 2px;
+    }
+    .titleOthers{
+        font-size: 25px;
+        top: 4865px;
+        letter-spacing: 2px;
+    }
+  }
+@media screen and (max-width: 992px) {
+    .titleCosmetic,.titleClothes,.titleWatches,.titleOthers {
+        left: 28px;
+      }
+      .titleCosmetic{
+          font-size: 30px;
+          top: 545px;
+          letter-spacing: 2px;
+      }
+      .titleClothes{
+          font-size: 30px;
+          top: 1360px;
+          letter-spacing: 2px;
+      }
+      .titleWatches{
+          font-size: 30px;
+          top: 2145px;
+          letter-spacing: 2px;
+      }
+      .titleOthers{
+          font-size: 30px;
+          top: 2910px;
+          letter-spacing: 2px;
+      }
+  }
