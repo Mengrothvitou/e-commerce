@@ -1,8 +1,8 @@
-import Head from 'next/head'
+
 import styles from '../styles/Home.module.css'
-import Button from '../components/presentations/button'
 import Link from 'next/link'
 import Image from '../components/presentations/image'
+import TextImage from './../components/presentations/text_img'
 export default function Home() {
     return (
       <div>
@@ -21,131 +21,35 @@ export default function Home() {
                 {/* Cosmetic */}
                 <h2 className="text-left m-3">Cosmetic</h2>
                 <div className="row">
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="cosmetic2.jpeg" className="img-container"></img>
-                            <p className="card-title">BB Cream</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="cosmetic3.jpeg" className="img-container"></img>
-                            <p className="card-title">Lipstick innisfree</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="cosmetic1.jpeg" className="img-container"></img>
-                            <p className="card-title">Eyelinner innisfree</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="cosmetic4.jpeg" className="img-container"></img>
-                            <p className="card-title">Sleeping mask innisfree</p>
-                        </div>
-                    </div>
+                    <TextImage src="cosmetic2.jpeg" title="BB Cream"/>
+                    <TextImage src="cosmetic3.jpeg" title="Lipstick innisfree"/>
+                    <TextImage src="cosmetic1.jpeg" title="Eyelinner innisfree"/>
+                    <TextImage src="cosmetic4.jpeg" title="Sleeping mask innisfree"/>
                 </div>
-
                 {/* Clothes */}
                 <h2 className="text-left m-3">Clothes</h2>
                 <div className="row">
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="shirt.jpeg" className="img-container"></img>
-                            <p className="card-title">Domnork T-shirt</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="clothe1.jpeg" className="img-container"></img>
-                            <p className="card-title">T-shirt</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="clothe3.jpeg" className="img-container"></img>
-                            <p className="card-title">Addidas Hoody</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="clothe4.jpeg" className="img-container"></img>
-                            <p className="card-title">Sweater</p>
-                        </div>
-                    </div>
+                    <TextImage src="shirt.jpeg" title="Domnork T-shirt"/>
+                    <TextImage src="clothe1.jpeg" title="T-shirt"/>
+                    <TextImage src="clothe3.jpeg" title="Addidas Hoody"/>
+                    <TextImage src="clothe4.jpeg" title="Sweater"/>
                 </div>
-
                 {/* Watches */}
                 <h2 className="text-left m-3">Watches</h2>
                 <div className="row">
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="watch1.jpeg" className="img-container"></img>
-                            <p className="card-title">Pu Banteay Srei</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="watch2.jpeg" className="img-container"></img>
-                            <p className="card-title">Tissot 1853</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="watch3.jpeg" className="img-container"></img>
-                            <p className="card-title">Omega Sa 1969</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="watch4.jpeg" className="img-container"></img>
-                            <p className="card-title">Pu Oyster Engrave</p>
-                        </div>
-                    </div>
+                    <TextImage src="watch1.jpeg" title="Pu Banteay Srei"/>
+                    <TextImage src="watch2.jpeg" title="Tissot 1853"/>
+                    <TextImage src="watch3.jpeg" title="Omega Sa 1969"/>
+                    <TextImage src="watch4.jpeg" title="Pu Oyster Engrave"/>
                 </div>
-
                 {/* Others */}
                 <h2 className="text-left m-3">Others</h2>
                 <div className="row">
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="other1.jpeg" className="img-container"></img>
-                            <p className="card-title">Shoe</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="other2.jpeg" className="img-container"></img>
-                            <p className="card-title">Perfume</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="other3.jpeg" className="img-container"></img>
-                            <p className="card-title">Bags</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="other4.jpeg" className="img-container"></img>
-                            <p className="card-title">Purse</p>
-                        </div>
-                    </div>
+                    <TextImage src="other1.jpeg" title="Shoe"/>
+                    <TextImage src="other2.jpeg" title="Perfume"/>
+                    <TextImage src="other3.jpeg" title="Bags"/>
+                    <TextImage src="other4.jpeg" title="Purse"/>
                 </div>
-
             </div>
       </div>
     )

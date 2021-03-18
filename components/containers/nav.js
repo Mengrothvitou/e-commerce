@@ -19,7 +19,7 @@ export default function Navbar(){
                             Products
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item " href="#">Clothes</a></li>
+                            <li><a class="dropdown-item " href="/clothes">Clothes</a></li>
                             <li><a class="dropdown-item" href="/shoe">Shoes</a></li>
                             <li><a class="dropdown-item" href="/books">Books</a></li>
                             <li><a class="dropdown-item" href="/bag">Bags</a></li>
