@@ -16,129 +16,137 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container-fluid">
-          <h1 className="main-heading">Welcome to Our Store</h1>
-          {/* Cosmetic */}
-            <div className="row">
-              <div className="col-4-lg">
-              <h2 className={styles.titleCosmetic}>Cosmetic</h2>
-                <div className="card">
-                  <img src="cosmetic2.jpeg"></img>
-                  <p className="card-title">BB Cream</p>
+        <div className="containr mt-4">
+                <h2 className="text-center1">Welcome to Our Store</h2>
+                {/* Cosmetic */}
+                <h2 className="text-left m-3">Cosmetic</h2>
+                <div className="row">
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="cosmetic2.jpeg" className="img-container"></img>
+                            <p className="card-title">BB Cream</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="cosmetic3.jpeg" className="img-container"></img>
+                            <p className="card-title">Lipstick innisfree</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="cosmetic1.jpeg" className="img-container"></img>
+                            <p className="card-title">Eyelinner innisfree</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="cosmetic4.jpeg" className="img-container"></img>
+                            <p className="card-title">Sleeping mask innisfree</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="cosmetic3.jpeg"></img>
-                  <p className="card-title">Lipstick innerfree </p>
+
+                {/* Clothes */}
+                <h2 className="text-left m-3">Clothes</h2>
+                <div className="row">
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="shirt.jpeg" className="img-container"></img>
+                            <p className="card-title">Domnork T-shirt</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="clothe1.jpeg" className="img-container"></img>
+                            <p className="card-title">T-shirt</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="clothe3.jpeg" className="img-container"></img>
+                            <p className="card-title">Addidas Hoody</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="clothe4.jpeg" className="img-container"></img>
+                            <p className="card-title">Sweater</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="cosmetic1.jpeg"></img>
-                  <p className="card-title">Eyelinner innisfree </p>
+
+                {/* Watches */}
+                <h2 className="text-left m-3">Watches</h2>
+                <div className="row">
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="watch1.jpeg" className="img-container"></img>
+                            <p className="card-title">Pu Banteay Srei</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="watch2.jpeg" className="img-container"></img>
+                            <p className="card-title">Tissot 1853</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="watch3.jpeg" className="img-container"></img>
+                            <p className="card-title">Omega Sa 1969</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="watch4.jpeg" className="img-container"></img>
+                            <p className="card-title">Pu Oyster Engrave</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="cosmetic4.jpeg"></img>
-                  <p className="card-title">
-                    Sleeping mask innisfree
-                  </p>
+
+                {/* Others */}
+                <h2 className="text-left m-3">Others</h2>
+                <div className="row">
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="other1.jpeg" className="img-container"></img>
+                            <p className="card-title">Shoe</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="other2.jpeg" className="img-container"></img>
+                            <p className="card-title">Perfume</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="other3.jpeg" className="img-container"></img>
+                            <p className="card-title">Bags</p>
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <div className="demo-content">
+                            <img src="other4.jpeg" className="img-container"></img>
+                            <p className="card-title">Purse</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
             </div>
-          {/* Clothes */}
-          <div className="row">
-            <h2 className={styles.titleClothes}>Clothes</h2>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="shirt.jpeg"></img>
-                  <p className="card-title">Domnork</p>
-                </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="clothe1.jpeg"></img>
-                  <p className="card-title">T-shirt</p>
-                </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="clothe3.jpeg"></img>
-                  <p className="card-title">Addidas Hoody</p>
-                </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="clothe4.jpeg"></img>
-                  <p className="card-title">
-                    Sweater
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* Watches */}
-            <div className="row">
-            <h2 className={styles.titleWatches}>Watches</h2>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="watch1.jpeg"></img>
-                  <p className="card-title">PU Banteay Srei</p>
-                </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="watch2.jpeg"></img>
-                  <p className="card-title">Tissot 1853</p>
-                </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="watch3.jpeg"></img>
-                  <p className="card-title">Omega Sa 1969 </p>
-                </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="watch5.jpeg"></img>
-                  <p className="card-title">
-                    PU Oyster Engrave 
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* Others */}
-            <div className="row">
-            <h2 className={styles.titleOthers}>Others...</h2>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="other1.jpeg"></img>
-                  <p className="card-title">Shoes</p>
-                </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="other2.jpeg"></img>
-                  <p className="card-title">Perfume</p>
-                </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="other3.jpeg"></img>
-                  <p className="card-title">Bags</p>
-                </div>
-              </div>
-              <div className="col-4-lg">
-                <div className="card">
-                  <img src="other4.jpeg"></img>
-                  <p className="card-title">
-                 Purse
-                  </p>
-                </div>
-              </div>
-            </div>
-        </div>
-     </div>
+      </div>
     )
   }

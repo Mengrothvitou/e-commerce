@@ -19,7 +19,7 @@ export default function Navbar(){
                             Products
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Clothes</a></li>
+                            <li><a class="dropdown-item " href="#">Clothes</a></li>
                             <li><a class="dropdown-item" href="/shoe">Shoes</a></li>
                             <li><a class="dropdown-item" href="/books">Books</a></li>
                             <li><a class="dropdown-item" href="/bag">Bags</a></li>
@@ -36,10 +36,10 @@ export default function Navbar(){
                     </ul>
                     <form className="d-flex ">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button className="btn btn-outline-success" type="submit">Search</button>
+                        <button className="btn btn-outline-success " type="submit">Search</button>
                     </form>
-                    <button type="button" className="btn btn-outline-primary ">Sign In</button>
-                    <button type="button" className="btn btn-outline-primary ">Add to Cart</button>
+                    <a href="#"><img src="sign.png" alt="sign" className="sign"></img></a>
+                    <a href="https://www.facebook.com/mrr.tou.77"><img src="cart.png" class="cart"></img></a>
                     </div>
                 </div>
             </nav>
