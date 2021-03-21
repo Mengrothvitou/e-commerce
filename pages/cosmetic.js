@@ -2,6 +2,7 @@ import TextImage from "../components/presentations/text_img"
 
 export default function Cosmetics(){
     return(
+
         <div>
           <div className="containr mt-4">
                 <h2 className="text-left m-3">Cosmetic</h2>
@@ -28,6 +29,9 @@ export default function Cosmetics(){
                 </div>
             </div>
         
+
+
+
         </div>
     )
 }
