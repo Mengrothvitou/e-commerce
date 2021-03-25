@@ -5,6 +5,7 @@ import Navbar from '../components/containers/nav'
 import Layout from  './../components/containers/layout'
 import Footer from '../pages/footer'
 
+
 function MyApp({ Component, pageProps }) {
   return (
     <div>

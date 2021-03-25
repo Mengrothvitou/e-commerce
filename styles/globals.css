@@ -1,6 +1,7 @@
 .body{
   display: block;
   margin: 0px;
+  width: 100%;
 }
 .container {
   padding: 0 0.5rem;
@@ -238,12 +239,31 @@ margin-right: 5px;
   margin-bottom: 15px;
 }
 .img-container{
+ 
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
   height: 300px;
-  border: 1px solid black;
+  border: 1px solid rgb(209, 205, 205);
+}
+.add-to-cart {
+  text-align: center;
+}
+.default-btn {
+  background-color: #533653;
+  color: #fff;
+  border: 1px solid #533653;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 450px;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 50px;
+}
+a:hover {
+  color: rgb(236, 235, 235);
+  text-decoration: none;
 }
 .mt-5{
   font-family: 'Rationale',sans-serif;
@@ -256,11 +276,21 @@ margin-right: 5px;
 .card-price{
   display: inline;
   text-align: right;
-  padding-left: 120px;
+  padding-left: 170px;
   font-size: 20px;
   font-weight: normal;
   font-family: 'Rationale', sans-serif;
 }
+  @media (max-width:812px){
+    .card-price{
+      display: inline;
+      text-align: right;
+      padding-left: 130px;
+      font-size: 20px;
+      font-weight: normal;
+      font-family: 'Rationale', sans-serif;
+    }
+  }
 .card-title{
   display: inline-block;
   text-align: left;
@@ -277,6 +307,7 @@ margin-right: 5px;
 
 }
 
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -291,7 +322,7 @@ margin-right: 5px;
 }
 @media screen and (max-width: 1000px) {
   .column {
-    width: 45%;
+    width: 40%;
 
   }
 }

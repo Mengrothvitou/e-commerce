@@ -1,4 +1,86 @@
 import TextImage from "../components/presentations/text_img"
+const watch=[
+    {
+        img:'watch1.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch2.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch3.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch4.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch5.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch6.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch7.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch8.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch9.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch10.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch11.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch12.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch13.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch14.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch15.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+    {
+        img:'watch16.jpg',
+        title:'watch',
+        price:'89.99$',
+    },
+]
 export default function Watches(){
     return(
         <div>
@@ -6,22 +88,15 @@ export default function Watches(){
           <div className="containr mt-4">
                 <h2 className="text-left m-3">Watches</h2>
                 <div className="row">
-                <TextImage src="watch1.jpg" title="watch" price="89.99$"/>
-                <TextImage src="watch2.jpg" title="watch" price="99.99$"/>
-                <TextImage src="watch3.jpg" title="watch" price="89.99$"/>
-                <TextImage src="watch4.jpg" title="watch" price="99.99$"/>
-                <TextImage src="watch5.jpg" title="watch" price="89.99$"/>
-                <TextImage src="watch6.jpg" title="watch" price="99.99$"/>
-                <TextImage src="watch7.jpg" title="watch" price="89.99$"/>
-                <TextImage src="watch8.jpg" title="watch" price="99.99$"/>
-                <TextImage src="watch9.jpg" title="watch" price="89.99$"/>
-                <TextImage src="watch10.jpg" title="watch" price="99.99$"/>
-                <TextImage src="watch11.jpg" title="watch" price="89.99$"/>
-                <TextImage src="watch12.jpg" title="watch" price="99.99$"/>
-                <TextImage src="watch13.jpg" title="watch" price="89.99$"/>
-                <TextImage src="watch14.jpg" title="watch" price="99.99$"/>
-                <TextImage src="watch15.jpg" title="watch" price="89.99$"/>
-                <TextImage src="watch16.jpg" title="watch" price="99.99$"/>
+                {
+                        watch.map((item) => {
+                            return (
+                                <TextImage src={item.img} title={item.title} price={item.price} />
+                            )
+
+                        })
+                    }
+
              
                 </div>
             </div>
