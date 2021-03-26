@@ -1,0 +1,87 @@
+.mainSign{
+    max-width: 100%;
+}
+.img{
+    width: 100%;
+}
+.containers{
+    top: 220px;
+    left: 180px;
+    position: absolute;
+    width: 400px;
+    height: 580px;
+    background: #FFFFFF;
+    opacity: 0.9;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 12px;
+}
+.signupNow{
+    padding-left: 50px;
+    font-size: 40px;
+    font-family: 'Ranga', cursive;
+}
+.logo{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+.title{
+    color: white;
+    top:50px;
+    left: 58px;
+    font-family: 'Rationale',sans-serif;
+    font-size: 15px;
+    position: absolute;
+}
+.subtitle{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top:75px;
+    left: 65px;
+    font-family: 'Rationale',sans-serif;
+}
+.logoImg{
+    width: 6rem;
+}
+.login{
+    text-align: center;
+    color: white;
+}
+.login:hover{
+    text-decoration: none;
+    color: white;
+}
+.signupbtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin:  12px auto
+}
+.signupbtn:hover{
+    background-color: #3e8e41
+}
+.account{
+    text-align: center;
+}
+.accountText{
+    margin: 5px;
+}
+@media screen and (max-width: 600px) {
+    .mainSign,.img{
+        max-width: 100%;
+        height: 800px;
+    }
+    .containers{
+        width: 85%;
+        position: absolute;
+        top: 200px;
+        left: 35px;
+    }
+  }

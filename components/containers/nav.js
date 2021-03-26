@@ -12,7 +12,7 @@ export default function Navbar(){
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav m-auto p-3 s-2 navbar-light">
                         <li className="nav-item">
-                        <a className="nav-link" aria-current="page" href="/">Home</a>
+                        <a className="nav-link" aria-current="page" href="/home">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,8 +38,8 @@ export default function Navbar(){
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                         <button className="btn btn-outline-success " type="submit">Search</button>
                     </form>
-                    <a href="#"><img src="sign.png" alt="sign" className="sign"></img></a>
-                    <a href="https://www.facebook.com/mrr.tou.77"><img src="cart.png" class="cart"></img></a>
+                    <a href="#"><img src="signout.png" alt="sign" className="sign"></img></a>
+                    <a href="https://www.facebook.com/mrr.tou.77"><img src="shopping.png" class="cart"></img></a>
                     </div>
                 </div>
             </nav>
