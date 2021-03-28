@@ -7,8 +7,8 @@ const TextImage = ({src,title,price}) => {
             <p className="card-title">{title}</p>
             <p className="card-price">{price}</p>
               <div class="add-to-cart">
-            <a href="#" class="default-btn">Add to Cart</a>
-            </div>
+                    <a href="#" class="default-btn">Add to Cart</a>
+              </div>
         </div>
     </div>);
 }
