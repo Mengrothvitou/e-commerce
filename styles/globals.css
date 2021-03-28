@@ -302,10 +302,6 @@ a:hover {
   display: table;
   clear: both;
 }
-.small-content{
-  background-color: blue;
-  height: 60px;
-}
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
