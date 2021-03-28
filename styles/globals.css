@@ -276,21 +276,11 @@ a:hover {
 .card-price{
   display: inline;
   text-align: right;
-  padding-left: 170px;
+  padding-left: 140px;
   font-size: 20px;
   font-weight: normal;
   font-family: 'Rationale', sans-serif;
 }
-  @media (max-width:812px){
-    .card-price{
-      display: inline;
-      text-align: right;
-      padding-left: 130px;
-      font-size: 20px;
-      font-weight: normal;
-      font-family: 'Rationale', sans-serif;
-    }
-  }
 .card-title{
   display: inline-block;
   text-align: left;
@@ -306,24 +296,51 @@ a:hover {
   margin-left: 2.5%;
 
 }
-
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+.small-content{
+  background-color: blue;
+  height: 60px;
+}
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
-
   }
+  .card-price{
+    text-align: right;
+    font-size: 20px;
+    font-weight: normal;
+    z-index: 102;
+    font-family: 'Rationale', sans-serif;
+  }
+
 }
+/* Mobile */
 @media screen and (max-width: 1000px) {
   .column {
-    width: 40%;
+    width: 45%;
 
+  }
+  .card-title{
+    text-align: right;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-weight: normal;
+    font-family: 'Rationale', sans-serif;
+  }
+  .card-price{
+    padding-left: 120px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: normal;
+    z-index: 102;
+    display: inline;
+    font-family: 'Rationale', sans-serif;
   }
 }
 .text-center1{
