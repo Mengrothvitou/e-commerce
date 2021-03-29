@@ -1,10 +1,11 @@
-export default MyApp
+
 import Head from 'next/head';
 import '../styles/globals.css'
 import Navbar from '../components/containers/nav'
 import Layout from  './../components/containers/layout'
-import Footer from '../pages/footer'
+import Footer from './../components/containers/footer'
 import {useRouter} from 'next/router'
+
 
 
 function MyApp({ Component, pageProps }) {
@@ -44,5 +45,6 @@ function MyApp({ Component, pageProps }) {
   )
   
 }
+export default MyApp;
 
 

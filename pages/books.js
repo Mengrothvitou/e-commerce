@@ -1,39 +1,108 @@
-
-export default function Books(){
+import TextImage from "../components/presentations/text_img"
+const book=[
+    {
+        img:'book1.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book2.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book3.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book4.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book5.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book6.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book7.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book8.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book9.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book10.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book11.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book12.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book13.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book14.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book15.jpg',
+        title:'book',
+        price:'9.99$',
+    },
+    {
+        img:'book16.webp',
+        title:'book',
+        price:'9.99$',
+    },
+]
+export default function Book(){
     return(
-        <div>
-            <div className="containr mt-4">
-                <h2 className="text-left m-3">Cosmetic</h2>
+        
+    <div>
+         <div>
+          <div className="containr mt-4">
+                <h2 className="text-left m-3">Books</h2>
                 <div className="row">
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="cosmetic2.jpeg" className="img-container"></img>
-                            <p className="card-title">BB Cream</p>
-                        </div>
-                    </div>
+                {
+                        book.map((item) => {
+                            return (
+                                <TextImage src={item.img} title={item.title} price={item.price} />
+                            )
 
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="cosmetic2.jpeg" className="img-container"></img>
-                            <p className="card-title">BB Cream</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="cosmetic2.jpeg" className="img-container"></img>
-                            <p className="card-title">BB Cream</p>
-                        </div>
-                    </div>
-
-                    <div className="column">
-                        <div className="demo-content">
-                            <img src="cosmetic2.jpeg" className="img-container"></img>
-                            <p className="card-title">BB Cream</p>
-                        </div>
-                    </div>
+                        })
+                    }
                 </div>
             </div>
+        
         </div>
+        
+    </div>
+        
     )
 }

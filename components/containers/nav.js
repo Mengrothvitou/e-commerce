@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styles from '../../styles/nav.module.css'
-export default function Navbar(){
+function Navbar(){
     return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,7 +24,7 @@ export default function Navbar(){
                             <li><a class="dropdown-item" href="/books">Books</a></li>
                             <li><a class="dropdown-item" href="/bag">Bags</a></li>
                             <li><a class="dropdown-item" href="/cosmetic">Cosmetics</a></li>
-                            <li><a class="dropdown-item" href="/wactches">Watches</a></li>
+                            <li><a class="dropdown-item" href="/watch">Watches</a></li>
                         </ul>
                         </li>
                         <li className="nav-item">
@@ -46,3 +46,4 @@ export default function Navbar(){
         </div>
     )
 }
+export default Navbar;
