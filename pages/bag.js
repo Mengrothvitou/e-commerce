@@ -93,30 +93,27 @@ const bag=[
 
     
 ]
+
+import Slider from './../components/presentations/slider'
 export default function Bag(){
     return(
         
     <div>
-         <div>
-          <div className="containr mt-4">
-                <h2 className="text-left m-3">Bags</h2>
-                <div className="row">
-               
-                  {
-                        bag.map((item) => {
-                            return (
-                                <TextImage src={item.img} title={item.title} price={item.price} />
-                            )
+        <Slider img="/bag01.png" img="/bag01.png"/>
+        <div className="containr mt-4">
+            <h2 className="text-left m-3">Bags</h2>
+            <div className="row">
+                {
+                  bag.map((item) => {
+                     return (
+                       <TextImage src={item.img} title={item.title} price={item.price} />
+                        )
 
-                        })
-                    }
-             
-                </div>
+                    })
+                  }
             </div>
-        
         </div>
-        
-        </div>
+    </div>
         
     )
 }

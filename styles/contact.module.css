@@ -1,5 +1,9 @@
 .message{
-    height: 200px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
 }
 .contentTitle{
     font-family: 'Rationale',sans-serif;
@@ -7,6 +11,14 @@
     padding-bottom: 25px;
     text-align: center;
 }
+.formControl {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
 .container{
     width: 50%;
     border-radius: 5px;

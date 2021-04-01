@@ -3,13 +3,7 @@
   margin: 0px;
   width: 100%;
 }
-.container {
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .main {
   padding: 5rem 0;
@@ -248,13 +242,13 @@ margin-right: 5px;
   margin-right: auto;
   width: 100%;
   height: 300px;
-  border: 1px solid rgb(209, 205, 205);
+  border: 1px solid black;
 }
 .add-to-cart {
   text-align: center;
 }
 .default-btn {
-  background-color: #533653;
+  background-color: black;
   color: #fff;
   border: 1px solid #533653;
   display: inline-block;
@@ -347,15 +341,7 @@ a:hover {
   font-size: 40px;
   letter-spacing: 1px;
 }
-/* Signup */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
+
 /* About Page */
 .card{
   width: 25rem;
@@ -493,6 +479,12 @@ h1{
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .d-grid {
   display: grid;
@@ -559,7 +551,7 @@ h1{
 }
 @media (max-width: 767px) {
   .container {
-    padding: 0 20px;
+    padding: 0 25px;
   }
   .social-icons {
     margin-top: 30px;

@@ -5,6 +5,7 @@ import Navbar from '../components/containers/nav'
 import Layout from  './../components/containers/layout'
 import Footer from './../components/containers/footer'
 import {useRouter} from 'next/router'
+// import {FormContextProvider} from './../pages/context/FormContext'
 
 
 
@@ -31,15 +32,13 @@ function MyApp({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Ranga:wght@700&display=swap" rel="stylesheet"/>
       </Head>
-      <Navbar/>
-      <Layout>          
-        <Component {...pageProps}/>
-        <Footer/>
-      </Layout>
-      {/* {
-        router.pathname===`/`||router.pathname===`/login`?<div>:<Nav/>
-      } */}
-      
+      {/* <FormContextProvider> */}
+        <Navbar/>
+        <Layout>          
+          <Component {...pageProps}/>
+          <Footer/>
+        </Layout>
+      {/* </FormContextProvider> */}
       
     </div> 
   )

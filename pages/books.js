@@ -81,27 +81,26 @@ const book=[
         price:'9.99$',
     },
 ]
+
+import Slider from './../components/presentations/slider'
 export default function Book(){
     return(
         
     <div>
-         <div>
-          <div className="containr mt-4">
-                <h2 className="text-left m-3">Books</h2>
-                <div className="row">
+        <Slider img="/book01.png" img="/book01.png"/>
+        <div className="containr mt-4">
+            <h2 className="text-left m-3">Books</h2>
+            <div className="row">
                 {
-                        book.map((item) => {
-                            return (
-                                <TextImage src={item.img} title={item.title} price={item.price} />
-                            )
+                  book.map((item) => {
+                     return (
+                       <TextImage src={item.img} title={item.title} price={item.price} />
+                        )
 
-                        })
-                    }
-                </div>
+                    })
+                  }
             </div>
-        
         </div>
-        
     </div>
         
     )

@@ -28,10 +28,10 @@ export default function Contact(){
                        <div className="form-group">
                             <label>Phone number</label>
                             <input type="text" className={styles.formControl} placeholder="Phone number"/>
-                       </div>
+                       </div> 
                        <div className="form-group">
                             <label>Message</label>
-                            <input type="textarea" className="form-control" placeholder="Your message..."/>
+                            <textarea className={styles.message} placeholder="Write something..."></textarea>
                        </div>
                        <div className={styles.btnSubmit}>
                             <button type="submit" class={styles.submit}>Submit</button>

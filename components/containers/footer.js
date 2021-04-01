@@ -8,21 +8,21 @@ function Footer(){
                         <div className="col">
                             <h5>Products</h5>
                             <ul className="list-unstyled quick-links">
-                                <li><a href=""><i className="fa fa-angle-double-right"></i>Cosmetics</a></li>
-                                <li><a href=""><i className="fa fa-angle-double-right"></i>Clothes</a></li>
-                                <li><a href=""><i className="fa fa-angle-double-right"></i>Watches</a></li>
-                                <li><a href=""><i className="fa fa-angle-double-right"></i>Shoes</a></li>
-                                <li><a href=""><i className="fa fa-angle-double-right"></i>Bags</a></li>
-                                <li><a href=""><i className="fa fa-angle-double-right"></i>Books</a></li>
+                                <li><a href="/cosmetic"><i className="fa fa-angle-double-right"></i>Cosmetics</a></li>
+                                <li><a href="/clothes"><i className="fa fa-angle-double-right"></i>Clothes</a></li>
+                                <li><a href="/watch"><i className="fa fa-angle-double-right"></i>Watches</a></li>
+                                <li><a href="/shoe"><i className="fa fa-angle-double-right"></i>Shoes</a></li>
+                                <li><a href="/bag"><i className="fa fa-angle-double-right"></i>Bags</a></li>
+                                <li><a href="/books"><i className="fa fa-angle-double-right"></i>Books</a></li>
                             </ul>
                         </div>
                         <div className="col">
                             <h5>Explore</h5>
                             <ul className="list-unstyled quick-links">
-                                <li><a href=""><i className="fa fa-angle-double-right"></i>Home</a></li>
+                                <li><a href="/home"><i className="fa fa-angle-double-right"></i>Home</a></li>
                                 <li><a href=""><i className="fa fa-angle-double-right"></i>Products</a></li>
-                                <li><a href=""><i className="fa fa-angle-double-right"></i>About US</a></li>
-                                <li><a href=""><i className="fa fa-angle-double-right"></i>Contact Us</a></li>     
+                                <li><a href="/about"><i className="fa fa-angle-double-right"></i>About US</a></li>
+                                <li><a href="/contact"><i className="fa fa-angle-double-right"></i>Contact Us</a></li>     
                             </ul>
                         </div>
                         <div className="col">

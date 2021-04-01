@@ -85,30 +85,26 @@ const clothes = [
     
 
 ]
+
+import Slider from './../components/presentations/slider'
 export default function Clothes(){
     return(
-        
     <div>
-         <div>
-          <div className="containr mt-4">
-                <h2 className="text-left m-3">Clothes</h2>
-                <div className="row">
-               
-                  {
-                        clothes.map((item) => {
-                            return (
-                                <TextImage src={item.img} title={item.title} price={item.price} />
-                            )
+        <Slider img="/clothe01.png" img="/clothe01.png"/>
+        <div className="containr mt-4">
+            <h2 className="text-left m-3">Clothes</h2>
+            <div className="row">
+                {
+                  clothes.map((item) => {
+                     return (
+                       <TextImage src={item.img} title={item.title} price={item.price} />
+                        )
 
-                        })
-                    }
-             
-                </div>
+                    })
+                  }
             </div>
-        
         </div>
-        
-        </div>
+    </div>
         
     )
 }

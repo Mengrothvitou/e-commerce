@@ -101,25 +101,24 @@ const shoes=[
     
 ]
 
+import Slider from './../components/presentations/slider'
 export default function Shoe(){
     return(
-        <div>
-          <div className="containr mt-4">
-                <h2 className="text-left m-3">Shoes</h2>
-                <div className="row">
+    <div>
+        <Slider img="/shoe01.png" img="/shoe01.png"/>
+        <div className="containr mt-4">
+            <h2 className="text-left m-3">Shoes</h2>
+            <div className="row">
                 {
-                        shoes.map((item) => {
-                            return (
-                                <TextImage src={item.img} title={item.title} price={item.price} />
-                            )
+                  shoes.map((item) => {
+                     return (
+                       <TextImage src={item.img} title={item.title} price={item.price} />
+                        )
 
-                        })
-                    }
-               
-                    
-                </div>
+                    })
+                  }
             </div>
-        
         </div>
+    </div>
     )
 }

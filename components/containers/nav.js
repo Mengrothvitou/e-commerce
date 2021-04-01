@@ -38,8 +38,8 @@ function Navbar(){
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                         <button className="btn btn-outline-success " type="submit">Search</button>
                     </form>
-                    <a href="#"><img src="signout.png" alt="sign" className="sign"></img></a>
-                    <a href="https://www.facebook.com/mrr.tou.77"><img src="shopping.png" class="cart"></img></a>
+                    <a href="/login"><img src="signout.png" alt="sign" className="sign"></img></a>
+                    <a href="#"><img src="shopping.png" class="cart"></img></a>
                     </div>
                 </div>
             </nav>

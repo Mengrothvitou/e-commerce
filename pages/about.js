@@ -1,21 +1,13 @@
 import { useEffect } from 'react'
 import styles from '../styles/about.module.css'
+import Slider from './../components/presentations/slider'
 export default function About(){
     useEffect(() =>{
         document.title=`About Us | Next Store`
     })
     return(
         <div>
-            <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                    <img src="about.png" className="d-block w-100 img-fluid" alt="..."/>
-                    </div>
-                    <div className="carousel-item">
-                    <img src="about2.jpeg" className="d-block w-100 img-fluid" alt="..."/>
-                    </div>
-                </div>
-            </div>
+            <Slider img="/about.png" img="/about2.jpeg"/>
             <div className={styles.titleBody}>
                 <h2 className={styles.title}>About Us</h2>
             </div>

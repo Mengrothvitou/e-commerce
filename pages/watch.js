@@ -84,25 +84,20 @@ const watch=[
 export default function Watches(){
     return(
         <div>
-         <div>
-          <div className="containr mt-4">
-                <h2 className="text-left m-3">Watches</h2>
-                <div className="row">
+        <Slider img="/watch01.png" img="/watch01.png"/>
+        <div className="containr mt-4">
+            <h2 className="text-left m-3">Watches</h2>
+            <div className="row">
                 {
-                        watch.map((item) => {
-                            return (
-                                <TextImage src={item.img} title={item.title} price={item.price} />
-                            )
+                  watch.map((item) => {
+                     return (
+                       <TextImage src={item.img} title={item.title} price={item.price} />
+                        )
 
-                        })
-                    }
-
-             
-                </div>
+                    })
+                  }
             </div>
-        
         </div>
-        
-        </div>
+    </div>
     )
 }
