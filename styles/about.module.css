@@ -78,7 +78,7 @@
         margin-left: 16px;
     }
     .imgAbout{
-        margin-top: 20px;
+        margin-top: 20px auto;
         margin-left: 150px;
         margin-right: 150px;
         width: 200px;
@@ -90,3 +90,5 @@
         height: 450px;
     }
 }
+
+

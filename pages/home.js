@@ -3,89 +3,89 @@ import TextImage from "../components/presentations/text_img"
 const cosmetic = [
     {
         img: 'cosmetic2.jpeg',
-        title: 'T-shirt',
-        price: 8.99 ,
+        title: 'Cream',
+        price: 6.99 ,
     },
     {
         img: 'cosmetic3.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Lipstick',
+        price: 14.99,
     },
     {
         img: 'cosmetic1.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Eyeliner',
+        price: 12.99,
     },
     {
         img: 'cosmetic4.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Mask',
+        price: 9.99,
     },
 ]
   const clothe =[
     {
         img: 'clo11.jpg',
         title: 'T-shirt',
-        price: 8.99,
+        price: 4.99,
     },
     {
         img: 'clothe1.jpeg',
         title: 'T-shirt',
-        price: 8.99,
+        price: 6.99,
     },
     {
         img: 'clo2.jpg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Hoody',
+        price: 7.99,
     },
     {
         img: 'clothe3.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Hoody',
+        price: 9.99,
     },
   ]
   const watch =[
     {
         img: 'watch1.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'PU',
+        price: 399.99,
     },
     {
         img: 'watch2.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Tissot',
+        price: 299.99,
     },
     {
         img: 'watch3.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Omega',
+        price: 179.99,
     },
     {
         img: 'watch4.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Fossil',
+        price: 167.99,
     },
   ]
   const other =[
     {
         img: 'other1.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Shoes',
+        price: 15.99,
     },
     {
-        img: 'other2.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        img: 'book2.jpg',
+        title: 'Books',
+        price: 4.99,
     },
     {
         img: 'other3.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Bags',
+        price: 9.99,
     },
     {
         img: 'other4.jpeg',
-        title: 'T-shirt',
-        price: 8.99,
+        title: 'Purses',
+        price: 10.99,
     },
   ]
   
