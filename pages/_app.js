@@ -8,8 +8,8 @@ import {useRouter} from 'next/router'
 // import {FormContextProvider} from './../pages/context/FormContext'
 
 
-
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
   return (
     <div>
       <Head>
@@ -33,10 +33,16 @@ function MyApp({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Ranga:wght@700&display=swap" rel="stylesheet"/>
       </Head>
       {/* <FormContextProvider> */}
-        <Navbar/>
+
+        {
+          router.pathname===`/`||router.pathname===`login`&&<Navbar/>
+        }
+       
         <Layout>          
           <Component {...pageProps}/>
-          <Footer/>
+          {
+          router.pathname===`/`||router.pathname===`login`&&<Footer/>
+        }>
         </Layout>
       {/* </FormContextProvider> */}
       
