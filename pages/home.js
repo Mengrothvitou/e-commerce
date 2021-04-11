@@ -1,4 +1,5 @@
 import TextImage from "../components/presentations/text_img"
+import Slider from './../components/presentations/slider'
 
 const cosmetic = [
     {
@@ -88,20 +89,22 @@ const cosmetic = [
         price: 10.99,
     },
   ]
-  
-import Slider from './../components/presentations/slider'
+  const addCart =(cart)=>{
+    console.log(cart)
+  }
+
 export default function Clothes(){
     return(
         
     <div>
-        
+        <Slider img="/cosmetic1.png" img="/cosmetic01.png"/>
         <div className="containr mt-4">
             <h2 className="text-left m-3">Cosmetics</h2>
               <div className="row">
                   {
                     cosmetic.map((item) => {
                       return (
-                        <TextImage src={item.img} title={item.title} price={item.price} />
+                        <TextImage src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} />
                         )
                       })
                   }
@@ -114,7 +117,7 @@ export default function Clothes(){
                   {
                     clothe.map((item) => {
                       return (
-                        <TextImage src={item.img} title={item.title} price={item.price} />
+                        <TextImage src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} />
                         )
                       })
                   }
@@ -127,7 +130,7 @@ export default function Clothes(){
                   {
                     watch.map((item) => {
                       return (
-                        <TextImage src={item.img} title={item.title} price={item.price} />
+                        <TextImage src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} />
                         )
                       })
                   }
@@ -140,13 +143,12 @@ export default function Clothes(){
                   {
                     other.map((item) => {
                       return (
-                        <TextImage src={item.img} title={item.title} price={item.price} />
+                        <TextImage src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} />
                         )
                       })
                   }
               </div>
           </div>
-
       </div>
         
     )

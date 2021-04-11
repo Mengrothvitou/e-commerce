@@ -85,13 +85,16 @@ const cosmetic = [
 ]
 
 import Slider from './../components/presentations/slider'
+import style from './../styles/title.module.css'
 export default function Cosmetic(){
     return(
         
         <div>
         <Slider img="/cosmetic1.png" img="/cosmetic01.png"/>
         <div className="containr mt-4">
-            <h2 className="text-left m-3">Cosmetics</h2>
+            <div className={style.contitle}>
+                <h2 className={style.title}>Cosmetics</h2>
+            </div>
             <div className="row">
                 {
                   cosmetic.map((item) => {

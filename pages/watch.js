@@ -81,12 +81,15 @@ const watch=[
         price:'89.99$',
     },
 ]
+import style from './../styles/title.module.css'
 export default function Watches(){
     return(
         <div>
         <Slider img="/watch01.png" img="/watch01.png"/>
         <div className="containr mt-4">
-            <h2 className="text-left m-3">Watches</h2>
+            <div className={style.contitle}>
+                <h2 className={style.title}>Watches</h2>
+            </div>
             <div className="row">
                 {
                   watch.map((item) => {

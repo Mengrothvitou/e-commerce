@@ -1,5 +1,38 @@
 import styles from '../styles//contact.module.css'
+import emailjs from 'emailjs-com'
+import {useToasts} from 'react-toast-notifications'
+
+
 export default function Contact(){
+    const {addToast}=useToasts();
+function sendEmail(e){
+    e.preventDefault();
+    emailjs
+        .sendForm(
+            "commerce-12345",
+            "template_zrpieih",
+            e.target,
+            "user_EIklteDhBRPRgHmzvJmE1"
+        )
+        .then(
+            (result) => {
+              console.log(result.text);
+              addToast("Your message has successfully sent!", {
+                appearance: 'success',
+                autoDismiss: true,
+              })
+              
+            },
+            (err) => {
+              console.log(err.text);
+              addToast("Your message was not able to be sent!", {
+                appearance: 'error',
+                autoDismiss: true,
+              })
+            }
+          );
+    
+}
     return(
         <div>
             <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
@@ -14,24 +47,20 @@ export default function Contact(){
             </div>
             <div className={styles.container}>
                 <h2 className={styles.contentTitle}><ins>Contact Us</ins></h2>
-                <form>
+                <form onSubmit={sendEmail}>
                     <div className="form-row">
-                       <div className="form-group col-md-6">
-                            <label>First name</label>
-                            <input type="text" className={styles.formControl} placeholder="First name"/>
+                        <div className="form-group col-md-6">
+                            <input type="text" className={styles.input} placeholder="First name" />
                        </div>
                        <div className="form-group col-md-6">
-                            <label>Last name</label>
-                            <input type="text" className={styles.formControl} placeholder="Last name"/>
+                            <input type="text" className={styles.input} placeholder="Last name" />
                        </div>
                     </div>
                        <div className="form-group">
-                            <label>Phone number</label>
-                            <input type="text" className={styles.formControl} placeholder="Phone number"/>
+                            <input type="text" className={styles.input} placeholder="Phone Number" /> 
                        </div> 
                        <div className="form-group">
-                            <label>Message</label>
-                            <textarea className={styles.message} placeholder="Write something..."></textarea>
+                            <textarea name="message" className={styles.message} placeholder="Write something..."></textarea>
                        </div>
                        <div className={styles.btnSubmit}>
                             <button type="submit" class={styles.submit}>Submit</button>

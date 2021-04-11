@@ -87,12 +87,15 @@ const clothes = [
 ]
 
 import Slider from './../components/presentations/slider'
+import style from './../styles/title.module.css'
 export default function Clothes(){
     return(
     <div>
         <Slider img="/clothe01.png" img="/clothe01.png"/>
         <div className="containr mt-4">
-            <h2 className="text-left m-3">Clothes</h2>
+            <div className={style.contitle}>
+                <h2 className={style.title}>Clothes</h2>
+            </div>
             <div className="row">
                 {
                   clothes.map((item) => {

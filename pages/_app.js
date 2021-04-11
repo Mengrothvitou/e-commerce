@@ -5,12 +5,14 @@ import Navbar from '../components/containers/nav'
 import Layout from  './../components/containers/layout'
 import Footer from './../components/containers/footer'
 import {useRouter} from 'next/router'
-// import {FormContextProvider} from './../pages/context/FormContext'
+import {ToastProvider} from 'react-toast-notifications'
+import {FormContextProvider} from './../pages/context/FormContext'
 
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
+    <ToastProvider>
     <div>
       <Head>
         <title>Next Store</title>
@@ -22,6 +24,7 @@ function MyApp({ Component, pageProps }) {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
         <link href="https://fonts.googleapis.com/css2?family=Neuton:wght@700&family=Rationale&display=swap" rel="stylesheet"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Rationale&display=swap" rel="stylesheet"/>
@@ -32,21 +35,21 @@ function MyApp({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Ranga:wght@700&display=swap" rel="stylesheet"/>
       </Head>
-      {/* <FormContextProvider> */}
 
         {
-          router.pathname===`/`||router.pathname===`login`&&<Navbar/>
+          router.pathname===`/`||router.pathname===`/login`? (<span/>):<Navbar/>
         }
-       
+      <FormContextProvider>
         <Layout>          
           <Component {...pageProps}/>
           {
-          router.pathname===`/`||router.pathname===`login`&&<Footer/>
-        }>
+          router.pathname===`/`||router.pathname===`/login`? (<span/>):<Footer/>
+        }
         </Layout>
-      {/* </FormContextProvider> */}
+      </FormContextProvider>
       
     </div> 
+    </ToastProvider>
   )
   
 }

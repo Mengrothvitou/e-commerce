@@ -119,6 +119,10 @@
   font-size: 35px;
   font-family: 'Rationale',sans-serif;
 }
+a:hover{
+  text-decoration: underline;
+  color: red;
+}
 .sign{
   margin: 12px;
   width: 40px;
@@ -223,6 +227,7 @@ margin-right: 5px;
 }
 */
 /* Home */
+
 .demo-content{
   margin-left: 10px;
   margin-right: 10px;
@@ -246,17 +251,21 @@ margin-right: 5px;
 }
 .add-to-cart {
   text-align: center;
+  padding-bottom: 20px;
 }
 .default-btn {
-  background-color: black;
+  background-color: lightslategray;
   color: #fff;
-  border: 1px solid #533653;
   display: inline-block;
   padding: 10px 30px;
-  border-radius: 30px;
+  margin: auto;
+  border-radius: 12px;
   font-weight: 450px;
   font-family: 'Open Sans', sans-serif;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+.default-btn:hover{
+  background-color: #777;
 }
 a:hover {
   color: rgb(236, 235, 235);
@@ -272,16 +281,19 @@ a:hover {
 }
 .card-price{
   display: inline;
-  text-align: right;
-  padding-left: 140px;
+  padding-left: 120px;
   font-size: 20px;
   font-weight: normal;
   font-family: 'Rationale', sans-serif;
 }
+.line2{
+  width: 50%;
+  margin-top: 0px;
+  background-color: black;
+}
 .card-title{
   display: inline-block;
   text-align: left;
-  padding: 15px;
   font-size: 20px;
   font-weight: normal;
   font-family: 'Rationale', sans-serif;
@@ -291,6 +303,7 @@ a:hover {
   width: 20%;
   margin-right: 2.5%;
   margin-left: 2.5%;
+  margin-top: 50px;
 
 }
 .row:after {
@@ -303,7 +316,6 @@ a:hover {
     width: 100%;
   }
   .card-price{
-    text-align: right;
     font-size: 20px;
     font-weight: normal;
     z-index: 102;
@@ -326,7 +338,6 @@ a:hover {
     font-family: 'Rationale', sans-serif;
   }
   .card-price{
-    padding-left: 120px;
     text-align: right;
     font-size: 20px;
     font-weight: normal;
