@@ -4,8 +4,14 @@ import {Router, useRouter} from 'next/router'
 function Navbar(){
     let iconStyles = { fontSize: "1.8em", marginLeft: "10px",marginRight: "10px",};
     const router = useRouter()
-    const onclick=()=>{
+    const user=()=>{
         router.push(`/login`)
+    }
+    const shop=()=>{
+        router.push(`shops`)
+    }
+    const Favorite=()=>{
+        router.push(`Favorite`)
     }
     return(
         <div>
@@ -18,7 +24,7 @@ function Navbar(){
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav m-auto p-3 s-2 navbar-light">
                         <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/home">Home</a>
+                            <a className="nav-link active" aria-current="page" href="/home">Home</a>
                         </li>
                         <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,11 +50,11 @@ function Navbar(){
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                         <button className="btn btn-outline-success " type="submit">Search</button>
                     </form>
-                    <FaUserAlt style={iconStyles} onClick={onclick}/>
+                    <button style={{height:50,width:60, border:"none",background:"none",marginTop:3,marginRight:0,}}><FaUserAlt style={iconStyles} onClick={user}/></button>
                     <br></br>
-                    <FaRegHeart style={iconStyles}/>
+                    <button  style={{height:50,width:60, border:"none",background:"none",marginTop:3,marginRight:0}}><FaRegHeart style={iconStyles} onClick={Favorite}/></button>
                     <br></br>
-                    <FaCartArrowDown style={iconStyles}/><p className={styles.status}>0</p>
+                    <button style={{height:50,width:60, border:"none",background:"none",marginTop:3,marginRight:0}}><FaCartArrowDown style={iconStyles} onClick={shop}/></button>
                     </div>
                 </div>
             </nav>
@@ -59,4 +65,5 @@ function Navbar(){
 import { FaCartArrowDown } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
+import { faBorderNone } from '@fortawesome/free-solid-svg-icons';
 export default Navbar;

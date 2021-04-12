@@ -299,6 +299,7 @@ a:hover {
   font-family: 'Rationale', sans-serif;
 }
 .column {
+  overflow: auto;
   float: left;
   width: 20%;
   margin-right: 2.5%;
