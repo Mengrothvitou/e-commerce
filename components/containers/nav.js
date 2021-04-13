@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import styles from '../../styles/nav.module.css'
 import {Router, useRouter} from 'next/router'
+import { FaSignOutAlt } from "react-icons/fa"
+import { FaRegHeart } from "react-icons/fa"
+import { FaCartArrowDown } from "react-icons/fa"
 function Navbar(){
     let iconStyles = { fontSize: "1.8em", marginLeft: "10px",marginRight: "10px",};
     const router = useRouter()
@@ -12,6 +15,15 @@ function Navbar(){
     }
     const Favorite=()=>{
         router.push(`Favorite`)
+    }
+    const home=()=>{
+        router.push(`home`)
+    }
+    const about=()=>{
+        router.push(`about`)
+    }
+    const contact=()=>{
+        router.push(`contact`)
     }
     return(
         <div>
@@ -40,17 +52,17 @@ function Navbar(){
                         </ul>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="/about">About Us</a>
+                        <a className="nav-link" aria-current="page" onClick={about}>About Us</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="/contact">Contact Us</a>
+                        <a className="nav-link" aria-current="page" onClick={contact}>Contact Us</a>
                         </li>
                     </ul>
                     <form className="d-flex ">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                         <button className="btn btn-outline-success " type="submit">Search</button>
                     </form>
-                    <button style={{height:50,width:60, border:"none",background:"none",marginTop:3,marginRight:0,}}><FaUserAlt style={iconStyles} onClick={user}/></button>
+                    <button style={{height:50,width:60, border:"none",background:"none",marginTop:3,marginRight:0,}}><FaSignOutAlt style={iconStyles} onClick={user}/></button>
                     <br></br>
                     <button  style={{height:50,width:60, border:"none",background:"none",marginTop:3,marginRight:0}}><FaRegHeart style={iconStyles} onClick={Favorite}/></button>
                     <br></br>
@@ -61,9 +73,4 @@ function Navbar(){
         </div>
     )
 }
-
-import { FaCartArrowDown } from "react-icons/fa";
-import { FaRegHeart } from "react-icons/fa";
-import { FaUserAlt } from "react-icons/fa";
-import { faBorderNone } from '@fortawesome/free-solid-svg-icons';
 export default Navbar;

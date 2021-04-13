@@ -1,11 +1,16 @@
+import { MdFavorite} from "react-icons/md";
+import { FaCartPlus } from "react-icons/fa";
+import style from './../../styles/textimg.module.css'
 const TextImage = ({src,title,price,onclick,onclick1,isFavorite}) => {
     const actived={
         color:'red',
         border:'none',
+        backgroundColor:'none',
 }
     const unactived={
         color:'black',
         border:'none',
+        backgroundColor:'none',
 }
 
     return(
@@ -25,7 +30,5 @@ const TextImage = ({src,title,price,onclick,onclick1,isFavorite}) => {
         </div>
     );
 }
-import { MdFavorite } from "react-icons/md";
-import { FaCartPlus } from "react-icons/fa";
-import style from './../../styles/textimg.module.css'
+
 export default TextImage;

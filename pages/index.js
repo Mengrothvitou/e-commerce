@@ -4,9 +4,12 @@ import { useContext } from 'react'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
 import {FormContext} from './context/FormContext'
-
+import {useEffect} from 'react'
 
 const SignUp = () => {
+  useEffect(()=>{
+    document.title=" Sign Up || Next Store";
+  })
   const { register, handleSubmit, errors } = useForm();
   const router = useRouter()
   const {form,setForm}=useContext(FormContext)

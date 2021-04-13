@@ -4,6 +4,7 @@ import {ProductContext} from './context/ProductContext'
 import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
 import {FavoriteContext} from './context/FavoriteContext'
+import {useEffect} from 'react'
 const book=[
     {
         img:'book1.jpg',
@@ -105,6 +106,9 @@ const book=[
 
 
 export default function Book(){
+    useEffect(() =>{
+        document.title=" Books || Next Store";
+    })
     const addCart =(cart)=>{
         setCards(cards.concat(cart));
         console.log(cards);
@@ -129,7 +133,7 @@ export default function Book(){
                 {
                   book.map((item) => {
                      return (
-                       <TextImage isFavorite={item.isFavorite} src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)}/>
+                       <TextImage isFavorite={item.isFavorite} src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} onclick1={()=>addFavorite(item)}/>
                         )
 
                     })

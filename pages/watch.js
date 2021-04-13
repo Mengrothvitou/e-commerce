@@ -4,106 +4,110 @@ import {ProductContext} from './context/ProductContext'
 import style from './../styles/title.module.css'
 import Slider from './../components/presentations/slider'
 import {FavoriteContext} from './context/FavoriteContext'
+import {useEffect} from 'react'
 const watch=[
     {
         img:'watch1.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch2.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch3.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch4.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch5.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch6.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch7.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch8.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch9.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch10.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch11.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch12.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch13.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch14.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch15.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
     {
         img:'watch16.jpg',
         title:'watch',
         price:'89.99$',
-        isFavorite: false
+        isFavorite: false,
     },
 ]
 
 export default function Watches(){
+    useEffect(()=>{
+        document.title=" Watches || Next Store";
+    })
     const addCart =(cart)=>{
         setCards(cards.concat(cart));
         console.log(cards);
@@ -127,7 +131,7 @@ export default function Watches(){
                 {
                   watch.map((item) => {
                      return (
-                       <TextImage isFavorite={item.isFavorite} src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} />
+                       <TextImage isFavorite={item.isFavorite} src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} onclick1={()=>addFavorite(item)} />
                         )
 
                     })

@@ -3,7 +3,7 @@ import styles from '../styles/about.module.css'
 import Slider from './../components/presentations/slider'
 export default function About(){
     useEffect(() =>{
-        document.title=`About Us`
+        document.title=" About Us || Next Store";
     })
     return(
         <div>

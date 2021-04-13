@@ -1,9 +1,13 @@
 import styles from '../styles//contact.module.css'
 import emailjs from 'emailjs-com'
 import {useToasts} from 'react-toast-notifications'
-
+import { faStaylinked } from '@fortawesome/free-brands-svg-icons';
+import {useEffect} from 'react'
 
 export default function Contact(){
+    useEffect(()=>{
+        document.title=" Contact || Next Store";
+    })
     const {addToast}=useToasts();
 function sendEmail(e){
     e.preventDefault();
@@ -34,7 +38,7 @@ function sendEmail(e){
     
 }
     return(
-        <div>
+        <div className={styles.full}>
             <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
@@ -46,7 +50,7 @@ function sendEmail(e){
                 </div>
             </div>
             <div className={styles.container}>
-                <h2 className={styles.contentTitle}><ins>Contact Us</ins></h2>
+                <h2 className={styles.contentTitle}>Contact Us</h2>
                 <form onSubmit={sendEmail}>
                     <div className="form-row">
                         <div className="form-group col-md-6">

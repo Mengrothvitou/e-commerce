@@ -9,7 +9,6 @@ import {ToastProvider} from 'react-toast-notifications'
 import {FormContextProvider} from './../pages/context/FormContext'
 import {ProductContextProvider} from './../pages/context/ProductContext'
 import {FavoriteContextProvider} from './../pages/context/FavoriteContext'
-import { SYMBOL_PREVIEW_DATA } from 'next/dist/next-server/server/api-utils';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()

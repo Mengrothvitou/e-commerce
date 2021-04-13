@@ -115,7 +115,7 @@ export default function Clothes(){
     setCards(cards.concat(cart));
     console.log(cards);
   }
-  const {cards, setCards}=useContext(ProductContext)
+  const {cards, setCards}=useContext(ProductContext);
   
 
   const addFavorite =(favo)=>{
@@ -123,7 +123,7 @@ export default function Clothes(){
     setFavorites(Favorite.concat(favo));
     console.log(Favorite);
   }
-  const {Favorite, setFavorites}=useContext(FavoriteContext) 
+  const {Favorite, setFavorites}=useContext(FavoriteContext);
     return(
         
     <div>

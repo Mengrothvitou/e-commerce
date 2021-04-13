@@ -1,3 +1,7 @@
+.full{
+    background-color: #f1f1f1;
+    margin: 0;
+}
 .message{
     width: 100%;
     padding: 20px;
@@ -7,7 +11,7 @@
     background: #f1f1f1;
 }
 .contentTitle{
-    font-family: 'Rationale',sans-serif;
+    font-family: 'Rationale', serif;
     font-size: 40px;
     padding-bottom: 25px;
     text-align: center;
@@ -21,12 +25,13 @@
     background-color: #f1f1f1;
   }
 .container{
-    width: 50%;
-    height: 600px;
+    box-shadow: 2px white;
+    width: 60%;
+    height: 500px;
     border-radius: 5px;
     padding: 20px;
     background-color: #FFFFFF;
-    margin: 50px auto;
+    margin: 40px auto;
     padding: 20px;
 }
 .submit{
