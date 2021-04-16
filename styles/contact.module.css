@@ -1,7 +1,4 @@
-.full{
-    background-color: #f1f1f1;
-    margin: 0;
-}
+
 .message{
     width: 100%;
     padding: 20px;
@@ -10,10 +7,14 @@
     border: none;
     background: #f1f1f1;
 }
+.line{
+    width: 50%;
+    background-color: black;
+}
 .contentTitle{
-    font-family: 'Rationale', serif;
-    font-size: 40px;
-    padding-bottom: 25px;
+    font-family: 'Ranga', cursive;
+    font-size: 46px;
+    padding-bottom: -10px;
     text-align: center;
 }
 .input {
@@ -27,7 +28,7 @@
 .container{
     box-shadow: 2px white;
     width: 60%;
-    height: 500px;
+    height: 650px;
     border-radius: 5px;
     padding: 20px;
     background-color: #FFFFFF;

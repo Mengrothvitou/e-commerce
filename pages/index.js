@@ -21,7 +21,6 @@ const SignUp = () => {
   return ( 
     <div>
       <div className={style.mainSign}>
-        {/* <img src="bgSign.png" className={style.img}/> */}
         <div className={style.containers}>
           <div className={style.logo}>
             <img src="logo.jpg" className={style.logoImg}/>

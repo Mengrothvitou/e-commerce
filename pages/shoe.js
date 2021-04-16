@@ -131,7 +131,7 @@ const shoes=[
 
 export default function Shoe(){
     useEffect(()=>{
-        doucemtn.title=" Shoes || Next Store";
+        document.title=" Shoes || Next Store";
     })
     const addCart =(cart)=>{
         setCards(cards.concat(cart));

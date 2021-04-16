@@ -1,8 +1,8 @@
 import styles from '../styles//contact.module.css'
 import emailjs from 'emailjs-com'
 import {useToasts} from 'react-toast-notifications'
-import { faStaylinked } from '@fortawesome/free-brands-svg-icons';
 import {useEffect} from 'react'
+import Slider from './../components/presentations/slider'
 
 export default function Contact(){
     useEffect(()=>{
@@ -39,31 +39,27 @@ function sendEmail(e){
 }
     return(
         <div className={styles.full}>
-            <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                    <img src="contact1.png" className="d-block w-100 img-fluid" alt="..."/>
-                    </div>
-                    <div className="carousel-item">
-                    <img src="about.png" className="d-block w-100 img-fluid" alt="..."/>
-                    </div>
-                </div>
-            </div>
+            <Slider img="contact1.png" img="contact1.png"/>
             <div className={styles.container}>
                 <h2 className={styles.contentTitle}>Contact Us</h2>
+                <hr className={styles.line}></hr>
                 <form onSubmit={sendEmail}>
                     <div className="form-row">
                         <div className="form-group col-md-6">
+                            <label>First name:</label>
                             <input type="text" className={styles.input} placeholder="First name" />
                        </div>
                        <div className="form-group col-md-6">
+                           <label>Last name:</label>
                             <input type="text" className={styles.input} placeholder="Last name" />
                        </div>
                     </div>
                        <div className="form-group">
+                           <label>Phone number</label>
                             <input type="text" className={styles.input} placeholder="Phone Number" /> 
                        </div> 
                        <div className="form-group">
+                           <label>Message</label>
                             <textarea name="message" className={styles.message} placeholder="Write something..."></textarea>
                        </div>
                        <div className={styles.btnSubmit}>

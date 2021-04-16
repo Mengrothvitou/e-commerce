@@ -19,14 +19,14 @@ const Login = () => {
       router.push(`home`)
     }
     else{
-      <span>Wrong Password a</span>
+      alert("Wrong Password")
     }
+    
 
   };
     return(
         <div>
             <div className={style.mainSign}>
-              {/* <img src="bgSign.png" className={style.img}/> */}
                 <div className={style.container}>
                     <div className={style.logo}>
                       <img src="logo.jpg" className={style.logoImg}/>

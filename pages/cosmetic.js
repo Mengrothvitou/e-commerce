@@ -9,25 +9,25 @@ import {useEffect} from 'react'
 const cosmetic = [
     {
         img: 'cosmetic2.jpeg',
-        title: 'Night cream',
+        title: 'BB cream',
         price: 12.99,
         isFavorite: false,
     },
     {
         img: 'cosmetic3.jpeg',
-        title: 'Night cream',
+        title: 'lipstick ',
         price: 12.99,
         isFavorite: false,
     },
     {
         img: 'cosmetic1.jpeg',
-        title: 'Night cream',
+        title: 'eyelinner',
         price: 12.99,
         isFavorite: false,
     },
     {
         img: 'cosmetic4.jpeg',
-        title: 'Night cream',
+        title: 'sleeping mask',
         price: 12.99,
         isFavorite: false,
     },
