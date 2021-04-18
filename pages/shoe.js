@@ -158,7 +158,6 @@ export default function Shoe(){
                      return (
                        <TextImage isFavorite={item.isFavorite} src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} onclick1={()=>addFavorite(item)} />
                         )
-
                     })
                   }
             </div>
@@ -166,3 +165,4 @@ export default function Shoe(){
     </div>
     )
 }
+    
