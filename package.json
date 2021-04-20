@@ -18,6 +18,7 @@
     "create-react-app": "^4.0.3",
     "emailjs-com": "^2.6.4",
     "i": "^0.3.6",
+    "js-length": "^1.0.22",
     "mdb-react-ui-kit": "^1.0.0-alpha4",
     "next": "10.0.6",
     "npm": "^7.6.3",
