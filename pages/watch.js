@@ -128,7 +128,7 @@ export default function Watches(){
       const {Favorite, setFavorites}=useContext(FavoriteContext) 
     return(
         <div>
-        <Slider img="/watch01.png" img="/watch01.png"/>
+        <Slider img="watch01.png" img="watch01.png"/>
         <div className="containr mt-4">
             <div className={style.contitle}>
                 <h2 className={style.title}>Watches</h2>

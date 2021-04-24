@@ -7,7 +7,7 @@ export default function About(){
     })
     return(
         <div>
-            <Slider img="/about.png" img="/about2.jpeg"/>
+            <Slider img="about.png" img="about2.jpeg"/>
             <div className={styles.titleBody}>
                 <h2 className={styles.title}>About Us</h2>
             </div>

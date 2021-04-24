@@ -1,4 +1,4 @@
-import styles from '../styles//contact.module.css'
+import styles from '../styles/contact.module.css'
 import emailjs from 'emailjs-com'
 import {useToasts} from 'react-toast-notifications'
 import {useEffect} from 'react'
