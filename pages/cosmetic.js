@@ -1,3 +1,4 @@
+import React from 'react'
 import TextImage from "../components/presentations/text_img"
 import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
@@ -5,8 +6,9 @@ import { useContext } from "react"
 import {ProductContext} from './context/ProductContext'
 import {FavoriteContext} from './context/FavoriteContext'
 import {useEffect} from 'react'
+import {SearchContext} from './context/Searchcontext'
 
-const cosmetic = [
+const Products = [
     {
         img: 'cosmetic2.jpeg',
         title: 'BB cream',
@@ -124,22 +126,31 @@ export default function Cosmetic(){
         console.log(Favorite);
       }
       const {Favorite, setFavorites}=useContext(FavoriteContext) 
+      const { keySearchs } = React.useContext(SearchContext)
+      const statusExistData = Products.some((item) =>
+          item.title.includes(keySearchs)
+      );
+      console.log("Match name or not :", statusExistData);
+      const handleSubmit = (e) => {
+          console.log(e.target.value);
+      };
     return(
         <div>
-        <Slider img="/cosmetic1.png" img="/cosmetic01.png"/>
+        <Slider img="/cosmetic1.png" img="/photoslide1.jpg "/>
         <div className="containr mt-4">
             <div className={style.contitle}>
                 <h2 className={style.title}>Cosmetics</h2>
             </div>
             <div className="row">
                 {
-                  cosmetic.map((item) => {
+                  Products.filter((item)=>item.title.includes(keySearchs)).map((item) => {
                      return (
                        <TextImage  isFavorite={item.isFavorite} src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} onclick1={()=>addFavorite(item)}/>
                         )
 
                     })
                   }
+                  {!statusExistData ? <span>Unmatch items</span>:<></>}
             </div>
         </div>
     </div>

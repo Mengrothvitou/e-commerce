@@ -1,9 +1,13 @@
+import React from 'react'
+import { useContext, useState } from "react"
 import Link from 'next/link'
 import styles from '../../styles/nav.module.css'
 import {Router, useRouter} from 'next/router'
 import { FaSignOutAlt } from "react-icons/fa"
 import { FaRegHeart } from "react-icons/fa"
 import { FaCartArrowDown } from "react-icons/fa"
+import { faHandSparkles } from '@fortawesome/free-solid-svg-icons'
+import {SearchContext} from './../../pages/context/Searchcontext'
 function Navbar(){
     let iconStyles = { fontSize: "1.8em", marginLeft: "10px",marginRight: "10px",};
     const router = useRouter()
@@ -25,6 +29,19 @@ function Navbar(){
     const contact=()=>{
         router.push(`contact`)
     }
+    const {keySearchs,setKeySearchs} = React.useContext(SearchContext)
+    console.log (keySearchs)
+    const handleSearch = (e) => {
+      console.log(e.target.value);
+      setKeySearchs(e.target.value);
+    }
+    // const statusExistData = Products.some((item) =>
+    // item.title.includes(keySearch)
+    // );
+    // console.log("Match name or not :", statusExistData);
+    // const handleSubmit = (e) => {
+    //   console.log(e.target.value);
+    // };
     return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -58,10 +75,10 @@ function Navbar(){
                         <a className="nav-link" aria-current="page" onClick={contact}>Contact Us</a>
                         </li>
                     </ul>
-                    <form className="d-flex ">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <form onChange ={handleSearch} style={{marginRight:20, marginTop:1}}>
+                    <input type="text"  value={keySearchs} placeholder="Search product name"/>
+                     </form>
                         <button className="btn btn-outline-success " type="submit">Search</button>
-                    </form>
                     <button style={{height:50,width:60, border:"none",background:"none",marginTop:3,marginRight:0,}}><FaSignOutAlt style={iconStyles} onClick={user}/></button>
                     <br></br>
                     <button  style={{height:50,width:60, border:"none",background:"none",marginTop:3,marginRight:0}}><FaRegHeart style={iconStyles} onClick={Favorite}/></button>
@@ -69,7 +86,9 @@ function Navbar(){
                     <button style={{height:50,width:60, border:"none",background:"none",marginTop:3,marginRight:0}}><FaCartArrowDown style={iconStyles} onClick={shop}/></button>
                     </div>
                 </div>
+               
             </nav>
+
         </div>
     )
 }

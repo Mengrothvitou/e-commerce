@@ -9,10 +9,12 @@ import {ToastProvider} from 'react-toast-notifications'
 import {FormContextProvider} from './../pages/context/FormContext'
 import {ProductContextProvider} from './../pages/context/ProductContext'
 import {FavoriteContextProvider} from './../pages/context/FavoriteContext'
+import {SearchContextProvider} from './../pages/context/Searchcontext'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
+    <SearchContextProvider>
     <ProductContextProvider>
       <FavoriteContextProvider>
       <ToastProvider>
@@ -59,7 +61,9 @@ function MyApp({ Component, pageProps }) {
         </ToastProvider>
       </FavoriteContextProvider>
     </ProductContextProvider>
+    </SearchContextProvider>
   )
+
   
 }
 export default MyApp;

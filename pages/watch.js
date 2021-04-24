@@ -1,3 +1,4 @@
+import React from 'react'
 import TextImage from "../components/presentations/text_img"
 import { useContext } from "react"
 import {ProductContext} from './context/ProductContext'
@@ -5,7 +6,8 @@ import style from './../styles/title.module.css'
 import Slider from './../components/presentations/slider'
 import {FavoriteContext} from './context/FavoriteContext'
 import {useEffect} from 'react'
-const watch=[
+import {SearchContext} from './context/Searchcontext'
+const Products=[
     {
         img:'watch1.jpg',
         title:'watch',
@@ -14,7 +16,7 @@ const watch=[
     },
     {
         img:'watch2.jpg',
-        title:'watch',
+        title:'watch tisso',
         price:'89.99$',
         isFavorite: false,
     },
@@ -120,16 +122,26 @@ export default function Watches(){
         console.log(Favorite);
       }
       const {Favorite, setFavorites}=useContext(FavoriteContext) 
+      
+    const { keySearchs } = React.useContext(SearchContext)
+    const statusExistData = Products.some((item) =>
+        item.title.includes(keySearchs)
+    );
+    console.log("Match name or not :", statusExistData);
+    const handleSubmit = (e) => {
+        console.log(e.target.value);
+    };
+
     return(
         <div>
-        <Slider img="/watch01.png" img="/watch01.png"/>
+        <Slider img="/watch01.png" img="/photowatch.jpg" img="/photowatch1.jpg"/>
         <div className="containr mt-4">
             <div className={style.contitle}>
                 <h2 className={style.title}>Watches</h2>
             </div>
             <div className="row">
                 {
-                  watch.map((item) => {
+                  Products.filter((item)=>item.title.includes(keySearchs)).map((item) => {
                      return (
                        <TextImage isFavorite={item.isFavorite} src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} onclick1={()=>addFavorite(item)} />
                         )

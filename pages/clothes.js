@@ -1,3 +1,4 @@
+import React from 'react'
 import TextImage from "../components/presentations/text_img"
 import { useContext } from "react"
 import {ProductContext} from './context/ProductContext'
@@ -5,7 +6,8 @@ import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
 import {FavoriteContext} from './context/FavoriteContext'
 import {useEffect} from 'react'
-const clothes = [
+import {SearchContext, SearchContextProvider} from './../pages/context/Searchcontext'
+const Products = [
     {
         img: 'clo1.jpg',
         title: 'T-shirt',
@@ -62,7 +64,7 @@ const clothes = [
     },
     {
         img: 'clo10.jpg',
-        title: 'T-shirt',
+        title: 'jacket',
         price: 8.99,
         isFavorite: false,
     },
@@ -113,6 +115,8 @@ export default function Clothes(){
     useEffect(() =>{
         document.title='Clothes || Next Store'
     })
+ const {keySearchs}= React.useContext(SearchContext)
+
     const addCart =(cart)=>{
         setCards(cards.concat(cart));
         console.log(cards);
@@ -125,16 +129,17 @@ export default function Clothes(){
         console.log(Favorite);
       }
       const {Favorite, setFavorites}=useContext(FavoriteContext) 
+
     return(
     <div>
-        <Slider img="/clothe01.png" img="/clothe01.png"/>
+        <Slider img="/clothe01.png" img="/photocloth.jpg"/>
         <div className="containr mt-4">
             <div className={style.contitle}>
                 <h2 className={style.title}>Clothes</h2>
             </div>
             <div className="row">
                 {
-                  clothes.map((item) => {
+                  Products.filter((item)=>item.title.includes(keySearchs)).map((item) => {
                      return (
                        <TextImage isFavorite={item.isFavorite} src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} onclick1={()=>addFavorite(item)}/>
                         )
