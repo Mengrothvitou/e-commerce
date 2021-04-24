@@ -54,26 +54,26 @@ function Navbar(){
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav m-auto p-3 s-2 navbar-light">
                         <li className="nav-item">
-                            <a className="nav-link" aria-current="page" onClick={home}>Home</a>
+                            <a style={{cursor:'pointer'}} className="nav-link" aria-current="page" onClick={home}>Home</a>
                         </li>
                         <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Products
                         </a>
                         <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a className="dropdown-item" activeClassName onClick={clothes}>Clothes</a></li>
-                            <li><a className="dropdown-item" onClick={shoe}>Shoes</a></li>
-                            <li><a className="dropdown-item" onClick={books}>Books</a></li>
-                            <li><a className="dropdown-item" onClick={bag}>Bags</a></li>
-                            <li><a className="dropdown-item" onClick={cosmetic}>Cosmetics</a></li>
-                            <li><a className="dropdown-item" onClick={watch}>Watches</a></li>
+                            <li><a style={{cursor:'pointer'}} className="dropdown-item" activeClassName onClick={clothes}>Clothes</a></li>
+                            <li><a style={{cursor:'pointer'}} className="dropdown-item" onClick={shoe}>Shoes</a></li>
+                            <li><a style={{cursor:'pointer'}} className="dropdown-item" onClick={books}>Books</a></li>
+                            <li><a style={{cursor:'pointer'}} className="dropdown-item" onClick={bag}>Bags</a></li>
+                            <li><a style={{cursor:'pointer'}} className="dropdown-item" onClick={cosmetic}>Cosmetics</a></li>
+                            <li><a style={{cursor:'pointer'}} className="dropdown-item" onClick={watch}>Watches</a></li>
                         </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" aria-current="page" onClick={about}>About Us</a>
+                            <a style={{cursor:'pointer'}} className="nav-link" aria-current="page" onClick={about}>About Us</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" aria-current="page" onClick={contact}>Contact Us</a>
+                            <a style={{cursor:'pointer'}} className="nav-link" aria-current="page" onClick={contact}>Contact Us</a>
                         </li>
                     </ul>
                     <form className="d-flex ">

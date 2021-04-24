@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
           </Head>
 
             {
-              router.pathname===`/`||router.pathname===`/login`? (<span/>):<Navbar/>
+              router.pathname===`/` ||router.pathname===`/login`? (<span/>):<Navbar/>
             }
           <FormContextProvider>
             <Layout>          

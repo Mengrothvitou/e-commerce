@@ -5,6 +5,7 @@ import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
 import {FavoriteContext} from './context/FavoriteContext'
 import {useEffect} from 'react' 
+import {useToasts} from 'react-toast-notifications'
 
 const bag=[
     {
@@ -119,12 +120,17 @@ const bag=[
 
 
 export default function Bag(){
+    const {addToast}=useToasts()
     useEffect(() =>{
         document.title=" Bags || Next Store";
     })
     const addCart =(cart)=>{
         setCards(cards.concat(cart));
         console.log(cards);
+        addToast("Your order has been placed in the cart. Check out!!!",{
+            appearance:'success',
+            autoDismiss: true,
+        })
       }
     const {cards, setCards}=useContext(ProductContext);
 

@@ -5,6 +5,7 @@ import { useContext } from "react"
 import {ProductContext} from './context/ProductContext'
 import {FavoriteContext} from './context/FavoriteContext'
 import {useEffect} from 'react'
+import {useToasts} from 'react-toast-notifications'
 
 const cosmetic = [
     {
@@ -109,12 +110,17 @@ const cosmetic = [
 
 
 export default function Cosmetic(){
+    const {addToast}=useToasts()
     useEffect(()=>{
         document.title="  Cosmetic || Next Store";
     })
     const addCart =(cart)=>{
         setCards(cards.concat(cart));
         console.log(cards);
+        addToast("Your order has been placed in the cart. Check out!!!",{
+            appearance:'success',
+            autoDismiss: true,
+        })
       }
     const {cards, setCards}=useContext(ProductContext);
 

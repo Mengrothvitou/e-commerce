@@ -3,6 +3,7 @@ import TextImage from "../components/presentations/text_img"
 import Slider from './../components/presentations/slider'
 import {ProductContext} from './context/ProductContext'
 import {FavoriteContext} from './context/FavoriteContext'
+import {useToasts} from 'react-toast-notifications'
 
 const cosmetic = [
     {
@@ -111,9 +112,14 @@ const cosmetic = [
   
 
 export default function Clothes(){
+  const {addToast}=useToasts()
   const addCart =(cart)=>{
     setCards(cards.concat(cart));
     console.log(cards);
+    addToast("Your order has been placed in the cart. Check out!!!",{
+      appearance:'success',
+      autoDismiss: true,
+  })
   }
   const {cards, setCards}=useContext(ProductContext);
   

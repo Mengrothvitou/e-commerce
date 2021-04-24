@@ -5,6 +5,7 @@ import style from './../styles/title.module.css'
 import Slider from './../components/presentations/slider'
 import {FavoriteContext} from './context/FavoriteContext'
 import {useEffect} from 'react'
+import {useToasts} from 'react-toast-notifications'
 const watch=[
     {
         img:'watch1.jpg',
@@ -105,12 +106,17 @@ const watch=[
 ]
 
 export default function Watches(){
+    const {addToast}=useToasts()
     useEffect(()=>{
         document.title=" Watches || Next Store";
     })
     const addCart =(cart)=>{
         setCards(cards.concat(cart));
         console.log(cards);
+        addToast("Your order has been placed in the cart. Check out!!!",{
+            appearance:'success',
+            autoDismiss: true,
+        })
       }
     const {cards, setCards}=useContext(ProductContext);
 

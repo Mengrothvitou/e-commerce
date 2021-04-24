@@ -5,8 +5,9 @@ import React, {useContext} from 'react'
 import {FormContext} from './context/FormContext'
 import {useRouter} from 'next/router'
 import {useEffect} from 'react'
-
+import {useToasts} from 'react-toast-notifications'
 const Login = () => {
+  const {addToast}=useToasts()
   useEffect(()=>{
     document.title=" Login || Next Store";
   })
@@ -19,7 +20,10 @@ const Login = () => {
       router.push(`home`)
     }
     else{
-      alert("Wrong Password")
+        addToast("Wrong password",{
+        appearance:'error',
+        autoDismiss: true,
+    })
     }
     
 

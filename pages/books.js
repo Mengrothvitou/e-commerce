@@ -5,6 +5,7 @@ import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
 import {FavoriteContext} from './context/FavoriteContext'
 import {useEffect} from 'react'
+import {useToasts} from 'react-toast-notifications'
 const book=[
     {
         img:'book1.jpg',
@@ -106,12 +107,17 @@ const book=[
 
 
 export default function Book(){
+    const {addToast}=useToasts()
     useEffect(() =>{
         document.title=" Books || Next Store";
     })
     const addCart =(cart)=>{
         setCards(cards.concat(cart));
         console.log(cards);
+        addToast("Your order has been placed in the cart. Check out!!!",{
+            appearance:'success',
+            autoDismiss: true,
+        })
       }
     const {cards, setCards}=useContext(ProductContext);
 
