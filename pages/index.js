@@ -3,7 +3,7 @@ import {useForm} from 'react-hook-form'
 import { useContext } from 'react'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
-import {FormContext} from './context/FormContext'
+import {FormContext} from './../context/FormContext'
 import {useEffect} from 'react'
 
 const SignUp = () => {

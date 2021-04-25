@@ -18,11 +18,12 @@
   }
   .pluscart{
     font-size: 1.5em;
-    margin-right: 16px;
+    margin: auto;
     
   }
   .heart{
-    font-size: 1.5em;;
+    font-size: 1.5em;
+    margin-left: 25px;
   }
   .imgcontainer{
  

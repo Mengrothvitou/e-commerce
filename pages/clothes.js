@@ -1,13 +1,18 @@
 import React from 'react'
 import TextImage from "../components/presentations/text_img"
 import { useContext } from "react"
-import {ProductContext} from './context/ProductContext'
+import {ProductContext} from '../context/ProductContext'
 import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
-import {FavoriteContext} from './context/FavoriteContext'
+import {FavoriteContext} from '../context/FavoriteContext'
 import {useEffect} from 'react'
+<<<<<<< HEAD
 import {SearchContext, SearchContextProvider} from './../pages/context/Searchcontext'
 const Products = [
+=======
+import {useToasts} from 'react-toast-notifications'
+const clothes = [
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
     {
         img: 'clo1.jpg',
         title: 'T-shirt',
@@ -112,6 +117,7 @@ const Products = [
 
 
 export default function Clothes(){
+    const {addToast}=useToasts()
     useEffect(() =>{
         document.title='Clothes || Next Store'
     })
@@ -120,6 +126,10 @@ export default function Clothes(){
     const addCart =(cart)=>{
         setCards(cards.concat(cart));
         console.log(cards);
+        addToast("Your order has been placed in the cart. Check out!!!",{
+            appearance:'success',
+            autoDismiss: true,
+        })
       }
     const {cards, setCards}=useContext(ProductContext);
 

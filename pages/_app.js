@@ -6,10 +6,16 @@ import Layout from  './../components/containers/layout'
 import Footer from './../components/containers/footer'
 import {useRouter} from 'next/router'
 import {ToastProvider} from 'react-toast-notifications'
+<<<<<<< HEAD
 import {FormContextProvider} from './../pages/context/FormContext'
 import {ProductContextProvider} from './../pages/context/ProductContext'
 import {FavoriteContextProvider} from './../pages/context/FavoriteContext'
 import {SearchContextProvider} from './../pages/context/Searchcontext'
+=======
+import {FormContextProvider} from './../context/FormContext'
+import {ProductContextProvider} from './../context/ProductContext'
+import {FavoriteContextProvider} from './../context/FavoriteContext'
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -28,7 +34,8 @@ function MyApp({ Component, pageProps }) {
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+            </script>
             <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
             <link href="https://fonts.googleapis.com/css2?family=Neuton:wght@700&family=Rationale&display=swap" rel="stylesheet"/>
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -42,7 +49,7 @@ function MyApp({ Component, pageProps }) {
           </Head>
 
             {
-              router.pathname===`/`||router.pathname===`/login`? (<span/>):<Navbar/>
+              router.pathname===`/` ||router.pathname===`/login`? (<span/>):<Navbar/>
             }
           <FormContextProvider>
             <Layout>          

@@ -1,13 +1,18 @@
 import React from 'react'
 import TextImage from "../components/presentations/text_img"
 import { useContext } from "react"
-import {ProductContext} from './context/ProductContext'
+import {ProductContext} from '../context/ProductContext'
 import style from './../styles/title.module.css'
 import Slider from './../components/presentations/slider'
-import {FavoriteContext} from './context/FavoriteContext'
+import {FavoriteContext} from '../context/FavoriteContext'
 import {useEffect} from 'react'
+<<<<<<< HEAD
 import {SearchContext} from './context/Searchcontext'
 const Products=[
+=======
+import {useToasts} from 'react-toast-notifications'
+const watch=[
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
     {
         img:'watch1.jpg',
         title:'watch',
@@ -107,12 +112,17 @@ const Products=[
 ]
 
 export default function Watches(){
+    const {addToast}=useToasts()
     useEffect(()=>{
         document.title=" Watches || Next Store";
     })
     const addCart =(cart)=>{
         setCards(cards.concat(cart));
         console.log(cards);
+        addToast("Your order has been placed in the cart. Check out!!!",{
+            appearance:'success',
+            autoDismiss: true,
+        })
       }
     const {cards, setCards}=useContext(ProductContext);
 
@@ -134,7 +144,11 @@ export default function Watches(){
 
     return(
         <div>
+<<<<<<< HEAD
         <Slider img="/watch01.png" img="/photowatch.jpg" img="/photowatch1.jpg"/>
+=======
+        <Slider img="watch01.png" img="watch01.png"/>
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
         <div className="containr mt-4">
             <div className={style.contitle}>
                 <h2 className={style.title}>Watches</h2>

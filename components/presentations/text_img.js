@@ -1,7 +1,7 @@
 import { MdFavorite} from "react-icons/md";
 import { FaCartPlus } from "react-icons/fa";
 import style from './../../styles/textimg.module.css'
-const TextImage = ({src,title,price,onclick,onclick1,isFavorite}) => {
+const TextImage = ({src,title,price,onclick,onclick1,isFavorite,}) => {
     const actived={
         color:'red',
         border:'none',

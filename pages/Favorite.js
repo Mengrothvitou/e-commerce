@@ -1,5 +1,5 @@
 import react, {useContext} from 'react';
-import {FavoriteContext} from './context/FavoriteContext'
+import {FavoriteContext} from '../context/FavoriteContext'
 import TextImage from "../components/presentations/text_img"
 import {useEffect} from 'react'
 

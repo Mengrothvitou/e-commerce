@@ -1,6 +1,7 @@
 import React from 'react'
 import TextImage from "../components/presentations/text_img"
 import { useContext } from "react"
+<<<<<<< HEAD
 import { ProductContext } from './context/ProductContext'
 import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
@@ -8,6 +9,15 @@ import { FavoriteContext } from './context/FavoriteContext'
 import { useEffect } from 'react'
 import { SearchContext } from './context/Searchcontext'
 const Products = [
+=======
+import {ProductContext} from '../context/ProductContext'
+import Slider from './../components/presentations/slider'
+import style from './../styles/title.module.css'
+import {FavoriteContext} from '../context/FavoriteContext'
+import {useEffect} from 'react'
+import {useToasts} from 'react-toast-notifications'
+const book=[
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
     {
         img: 'book1.jpg',
         title: 'book',
@@ -107,15 +117,31 @@ const Products = [
 ]
 
 
+<<<<<<< HEAD
 export default function Book() {
     useEffect(() => {
         document.title = " Books || Next Store";
+=======
+export default function Book(){
+    const {addToast}=useToasts()
+    useEffect(() =>{
+        document.title=" Books || Next Store";
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
     })
     const addCart = (cart) => {
         setCards(cards.concat(cart));
         console.log(cards);
+<<<<<<< HEAD
     }
     const { cards, setCards } = useContext(ProductContext);
+=======
+        addToast("Your order has been placed in the cart. Check out!!!",{
+            appearance:'success',
+            autoDismiss: true,
+        })
+      }
+    const {cards, setCards}=useContext(ProductContext);
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
 
     const addFavorite = (favo) => {
         favo.isFavorite = !favo.isFavorite;
