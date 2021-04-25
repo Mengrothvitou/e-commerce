@@ -21,7 +21,7 @@ const Shop =() =>{
             Total=Total + Number((cards[i].price));
         }
     const btn={
-        backgroundColor: 'skyblue',
+        backgroundColor: 'rgb(116,140,249)',
         color: 'white',
         padding: '12px 20px',
         border: 'none',

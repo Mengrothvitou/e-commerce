@@ -67,7 +67,7 @@ const SignUp = () => {
             </input>
             {errors.Password && <span className={style.message}>{errors.Password.message}</span>}
             <br></br>
-            <button type="submit" className={style.signupbtn}>Submit</button>
+            <button type="submit" className={style.signupbtn}>Create account</button>
           </form>
           <div className={style.account}>
             <p className={style.accountText}>Already have an account?<a href="/login" className={style.link2}> <ins>Login</ins></a></p>

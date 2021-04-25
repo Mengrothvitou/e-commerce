@@ -1,12 +1,14 @@
+import React from 'react'
 import TextImage from "../components/presentations/text_img"
 import { useContext } from "react"
 import {ProductContext} from '../context/ProductContext'
 import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
 import {FavoriteContext} from '../context/FavoriteContext'
-import {useEffect} from 'react'
+import {useEffect} from 'react' 
+import {SearchContext} from '../context/SearchContext'
 import {useToasts} from 'react-toast-notifications'
-const book=[
+const Products=[
     {
         img:'book1.jpg',
         title:'book',
@@ -127,23 +129,34 @@ export default function Book(){
         console.log(Favorite);
       }
       const {Favorite, setFavorites}=useContext(FavoriteContext) 
+      const {keySearchs} = React.useContext(SearchContext)
+      const statusExistData = Products.some((item) =>
+  item.title.includes(keySearchs)
+  );
+  console.log("Match name or not :", statusExistData);
+  const handleSubmit = (e) => {
+    console.log(e.target.value);
+  };
     return(
         
     <div>
-        <Slider img="/book01.png" img="/book01.png"/>
+        <Slider img="/book001.jpeg" img="/book01.png"/>
         <div className="containr mt-4">
             <div className={style.contitle}>
                 <h2 className={style.title}>Books</h2>
             </div>
             <div className="row">
-                {
-                  book.map((item) => {
-                     return (
-                       <TextImage isFavorite={item.isFavorite} src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} onclick1={()=>addFavorite(item)}/>
+            {
+                    Products.filter((item)=>item.title.includes(keySearchs)).map((item) => {
+                      return (
+                        <TextImage isFavorite={item.isFavorite} src={item.img} title={item.title} price={item.price} onclick={()=>addCart(item)} onclick1={()=>addFavorite(item)} />
                         )
+                        
 
-                    })
+                      })                      
                   }
+                  {!statusExistData ? <span>Unmatch items</span>:<></>}
+                   
             </div>
         </div>
     </div>
