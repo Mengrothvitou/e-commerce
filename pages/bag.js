@@ -13,106 +13,106 @@ const Products=[
     {
         img:'bag1.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     {
         img:'bag2.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     {
         img:'bag3.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     
     {
         img:'bag4.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     
     {
         img:'bag5.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     
     {
         img:'bag6.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     
     {
         img:'bag7.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     
     {
         img:'bag8.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     {
         img:'bag9.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     
     {
         img:'bag10.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     
     {
         img:'bag11.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     
     {
         img:'bag12.jpg',
         title:'bag for men',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
       {
         img:'bag13.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     {
         img:'bag14.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     
     {
         img:'bag15.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     {
         img:'bag16.jpg',
         title:'bag',
-        price:'10.99$',
+        price:'10.99',
         isFavorite: false,
     },
     

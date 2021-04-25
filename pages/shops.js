@@ -16,9 +16,9 @@ const Shop =() =>{
             autoDismiss: true,
         })
     }
-    let Total=0;
-        for(let i=0; i< cards.length; i++){
-            Total = Total + Number((cards[i].price));
+    let Totals=0;
+        for(let i=0; i<cards.length; i++){
+            Totals =Totals +Number((cards[i].price));
         }
     const btn={
         backgroundColor: 'rgb(116,140,249)',
@@ -57,7 +57,7 @@ const Shop =() =>{
                         )
                     })}
                    <div style={container}>
-                        {cards.length>0 ?(<p style={price}> Your Total price is {Total} $</p>):(<p style={price}>Your card is empty </p>)}
+                       {cards.length>0 ?(<span style={price}>Your total price: {Totals}</span>):(<span style={price}>Your cart is empty</span>)}
                    </div>
                    <div style={container}>
                             <button style={btn} onClick={Order}>Order</button>
