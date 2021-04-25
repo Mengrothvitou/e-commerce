@@ -6,7 +6,7 @@ import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
 import {FavoriteContext} from '../context/FavoriteContext'
 import {useEffect} from 'react' 
-import {SearchContext} from '../context/SearchContext'
+import {SearchContext} from './../context/SearchContext'
 import {useToasts} from 'react-toast-notifications'
 
 const Products=[
