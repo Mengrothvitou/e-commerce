@@ -1,9 +1,9 @@
 import TextImage from "../components/presentations/text_img"
 import { useContext } from "react"
-import {ProductContext} from './context/ProductContext'
+import {ProductContext} from '../context/ProductContext'
 import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
-import {FavoriteContext} from './context/FavoriteContext'
+import {FavoriteContext} from '../context/FavoriteContext'
 import {useEffect} from 'react'
 import {useToasts} from 'react-toast-notifications'
 const book=[

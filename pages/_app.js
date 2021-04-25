@@ -6,9 +6,9 @@ import Layout from  './../components/containers/layout'
 import Footer from './../components/containers/footer'
 import {useRouter} from 'next/router'
 import {ToastProvider} from 'react-toast-notifications'
-import {FormContextProvider} from './../pages/context/FormContext'
-import {ProductContextProvider} from './../pages/context/ProductContext'
-import {FavoriteContextProvider} from './../pages/context/FavoriteContext'
+import {FormContextProvider} from './../context/FormContext'
+import {ProductContextProvider} from './../context/ProductContext'
+import {FavoriteContextProvider} from './../context/FavoriteContext'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()

@@ -1,8 +1,8 @@
 import { useContext, useState } from "react"
 import TextImage from "../components/presentations/text_img"
 import Slider from './../components/presentations/slider'
-import {ProductContext} from './context/ProductContext'
-import {FavoriteContext} from './context/FavoriteContext'
+import {ProductContext} from '../context/ProductContext'
+import {FavoriteContext} from '../context/FavoriteContext'
 import {useToasts} from 'react-toast-notifications'
 
 const cosmetic = [

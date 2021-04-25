@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {ProductContext} from './context/ProductContext'
+import {ProductContext} from '../context/ProductContext'
 import TextImage from "../components/presentations/text_img"
 import {useEffect} from 'react'
 import {useToasts} from 'react-toast-notifications'
