@@ -2,6 +2,7 @@ import React from 'react'
 import TextImage from "../components/presentations/text_img"
 import { useContext } from "react"
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProductContext } from './context/ProductContext'
 import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
@@ -13,6 +14,11 @@ const Products = [
 import {ProductContext} from '../context/ProductContext'
 import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
+=======
+import {ProductContext} from '../context/ProductContext'
+import Slider from './../components/presentations/slider'
+import style from './../styles/title.module.css'
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
 import {FavoriteContext} from '../context/FavoriteContext'
 import {useEffect} from 'react'
 import {useToasts} from 'react-toast-notifications'
@@ -132,9 +138,12 @@ export default function Book(){
         setCards(cards.concat(cart));
         console.log(cards);
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
     const { cards, setCards } = useContext(ProductContext);
 =======
+=======
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
         addToast("Your order has been placed in the cart. Check out!!!",{
             appearance:'success',
             autoDismiss: true,

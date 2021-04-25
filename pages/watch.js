@@ -7,9 +7,12 @@ import Slider from './../components/presentations/slider'
 import {FavoriteContext} from '../context/FavoriteContext'
 import {useEffect} from 'react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {SearchContext} from './context/Searchcontext'
 const Products=[
 =======
+=======
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
 import {useToasts} from 'react-toast-notifications'
 const watch=[
 >>>>>>> 943f6488091deb9be45238f19614905d68f0b357
@@ -145,7 +148,11 @@ export default function Watches(){
     return(
         <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Slider img="/watch01.png" img="/photowatch.jpg" img="/photowatch1.jpg"/>
+=======
+        <Slider img="watch01.png" img="watch01.png"/>
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
 =======
         <Slider img="watch01.png" img="watch01.png"/>
 >>>>>>> 943f6488091deb9be45238f19614905d68f0b357

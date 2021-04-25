@@ -27,6 +27,7 @@ function Navbar(){
         router.push(`contact`)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     const {keySearchs,setKeySearchs} = React.useContext(SearchContext)
     console.log (keySearchs)
     const handleSearch = (e) => {
@@ -41,6 +42,8 @@ function Navbar(){
     //   console.log(e.target.value);
     // };
 =======
+=======
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
     const clothes=()=>{
         router.push(`clothes`)
     }
@@ -62,6 +65,9 @@ function Navbar(){
     const books=()=>{
         router.push(`books`)
     }
+<<<<<<< HEAD
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
+=======
 >>>>>>> 943f6488091deb9be45238f19614905d68f0b357
     return(
         <div>

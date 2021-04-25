@@ -7,7 +7,11 @@ import style from './../styles/title.module.css'
 import {FavoriteContext} from '../context/FavoriteContext'
 import {useEffect} from 'react' 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {SearchContext} from './context/Searchcontext'
+=======
+import {useToasts} from 'react-toast-notifications'
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
 =======
 import {useToasts} from 'react-toast-notifications'
 >>>>>>> 943f6488091deb9be45238f19614905d68f0b357

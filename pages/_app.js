@@ -7,10 +7,16 @@ import Footer from './../components/containers/footer'
 import {useRouter} from 'next/router'
 import {ToastProvider} from 'react-toast-notifications'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {FormContextProvider} from './../pages/context/FormContext'
 import {ProductContextProvider} from './../pages/context/ProductContext'
 import {FavoriteContextProvider} from './../pages/context/FavoriteContext'
 import {SearchContextProvider} from './../pages/context/Searchcontext'
+=======
+import {FormContextProvider} from './../context/FormContext'
+import {ProductContextProvider} from './../context/ProductContext'
+import {FavoriteContextProvider} from './../context/FavoriteContext'
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
 =======
 import {FormContextProvider} from './../context/FormContext'
 import {ProductContextProvider} from './../context/ProductContext'

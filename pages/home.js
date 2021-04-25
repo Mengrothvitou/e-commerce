@@ -3,9 +3,15 @@ import { useContext, useState } from "react"
 import TextImage from "../components/presentations/text_img"
 import Slider from './../components/presentations/slider'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {ProductContext} from './context/ProductContext'
 import {FavoriteContext} from './context/FavoriteContext'
 import {SearchContext} from './context/Searchcontext'
+=======
+import {ProductContext} from '../context/ProductContext'
+import {FavoriteContext} from '../context/FavoriteContext'
+import {useToasts} from 'react-toast-notifications'
+>>>>>>> 943f6488091deb9be45238f19614905d68f0b357
 =======
 import {ProductContext} from '../context/ProductContext'
 import {FavoriteContext} from '../context/FavoriteContext'
