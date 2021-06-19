@@ -1,6 +1,7 @@
 import { MdFavorite} from "react-icons/md";
 import { FaCartPlus } from "react-icons/fa";
 import style from './../../styles/textimg.module.css'
+import { Grid } from "@material-ui/core";
 const TextImage = ({src,title,price,onclick,onclick1,isFavorite,}) => {
     const actived={
         color:'red',
@@ -27,7 +28,8 @@ const TextImage = ({src,title,price,onclick,onclick1,isFavorite,}) => {
                     <MdFavorite onClick={onclick1} style={isFavorite?actived:unactived} className={style.heart}/>
                 </div>
             </div>
-        </div>
+        </div>  
+       
     );
 }
 

@@ -60,7 +60,7 @@ function sendEmail(e){
                        </div> 
                        <div className="form-group">
                            <label>Message</label>
-                            <textarea name="message" className={styles.message} placeholder="Write something..."></textarea>
+                            <textarea name="message" className={styles.message} placeholder="Write something..." style={{height: 150}}></textarea>
                        </div>
                        <div className={styles.btnSubmit}>
                             <button type="submit" class={styles.submit}>Submit</button>
