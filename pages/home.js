@@ -8,6 +8,7 @@ import {FavoriteContext} from '../context/FavoriteContext'
 import {useEffect} from 'react' 
 import {SearchContext} from './../context/SearchContext'
 import {useToasts} from 'react-toast-notifications'
+
 const cos = [
     {
         img: 'cosmetic2.jpeg',

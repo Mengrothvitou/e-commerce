@@ -18,22 +18,22 @@ export async function getStaticProps() {
 export default function admin({ userdata , productdata }) {
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>users</h1>
+      <h1 style={{ textAlign: "center" }}>Users</h1>
       {
         userdata.map((user,index) => {
           return (
             <div>
-              <h3 key={user._id} style={{ textAlign: "center" }}>{user.name} {user.email} {user.phone_number} {user.gender} {user._id}</h3>
+              <h3 key={user._id} style={{ textAlign: "center" }}>{user.username} {user.email} {user.phoneNumber} {user.gender} {user._id}</h3>
             </div>
           )
           })
       }
-      <h1 style={{ textAlign: "center" }}>products</h1>
+      <h1 style={{ textAlign: "center" }}>Products</h1>
       {
         productdata.map((product,index) => {
           return (
             <div>
-              <h3 key={product._id} style={{ textAlign: "center" }}>{product.name} {product._id}</h3>
+              <h3 key={product._id} style={{ textAlign: "center" }}>{product.name} {product.id} {product.price} {product.type} {product.desc}</h3>
             </div>
           )
           })
