@@ -139,7 +139,7 @@ export default function Clothes(){
   );
     return(
     <div>
-        <Slider img="/cloth001.jpeg" img="/cloth002.jpeg"/>
+        <Slider img="/SlideMen@2x.png"/>
         <div className="containr mt-4">
             <div className={style.contitle}>
                 <h2 className={style.title}>Clothes</h2>

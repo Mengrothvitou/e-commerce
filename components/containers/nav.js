@@ -26,6 +26,9 @@ function Navbar(){
     const contact=()=>{
         router.push("contact")
     }
+    const Admin=()=>{
+        router.push("Admin")
+    }
 
     const {keySearchs,setKeySearchs} = React.useContext(SearchContext)
     console.log (keySearchs)
@@ -88,6 +91,9 @@ function Navbar(){
                         </li>
                         <li className="nav-item">
                             <a style={{cursor:'pointer'}} className="nav-link" aria-current="page" onClick={contact}>Contact Us</a>
+                        </li>
+                        <li className="nav-item">
+                            <a style={{cursor:'pointer'}} className="nav-link" aria-current="page" onClick={Admin}>Admin</a>
                         </li>
                     </ul>
                     <form onChange ={handleSearch} style={{marginRight:20, marginTop:1}}>

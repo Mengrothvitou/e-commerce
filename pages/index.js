@@ -17,8 +17,10 @@ const SignUp = () => {
     setForm(data)
     router.push('/login')
   };
+  
 
   return ( 
+    
     <div>
       <div className={style.mainSign}>
         <div className={style.containers}>
