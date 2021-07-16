@@ -155,11 +155,7 @@ export default function Bag({clothedata}){
     return(
         
     <div>
-<<<<<<< HEAD
         <Slider img="/SlideMen@2x.png"/>
-=======
-        <Slider img="/bag001.jpeg" img="/bag002.jpeg"/>
->>>>>>> e545bc2f350187f75e3860fd236f8763c80a2df7
         <div className="containr mt-4">
             <div className={style.contitle}>
                 <h2 className={style.title}>Clothes</h2>
