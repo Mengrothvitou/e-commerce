@@ -40,6 +40,7 @@ const rows = [
   createData('10.12.2020', 'Chingsien', 'chingsien@gmail.com', '095884475', '80$','Booking'),
   createData('10.12.2020', 'rothvitou', 'chingsien@gmail.com', '095884475', '80$','Booking'),
 
+
  
 ];
 
@@ -60,11 +61,11 @@ export default function Tablelist (){
         <TableHead>
           <TableRow className={styles.header}>
             <StyledTableCell>Order Date</StyledTableCell>
-            <StyledTableCell align="right">Username</StyledTableCell>
-            <StyledTableCell align="right">Email</StyledTableCell>
-            <StyledTableCell align="right">Phone</StyledTableCell>
-            <StyledTableCell align="right">Price</StyledTableCell>
-            <StyledTableCell align="right">Status</StyledTableCell>
+            <StyledTableCell align="center">Username</StyledTableCell>
+            <StyledTableCell align="center">Email</StyledTableCell>
+            <StyledTableCell align="center">Phone</StyledTableCell>
+            <StyledTableCell align="center">Price</StyledTableCell>
+            <StyledTableCell align="center">Status</StyledTableCell>
         
           </TableRow>
         </TableHead>
@@ -74,11 +75,11 @@ export default function Tablelist (){
               <StyledTableCell component="th" scope="row">
                 {row.Date}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.Username}</StyledTableCell>
-              <StyledTableCell align="right">{row.Email}</StyledTableCell>
-              <StyledTableCell align="right">{row.Phone}</StyledTableCell>
-              <StyledTableCell align="right">{row.Price}</StyledTableCell>
-              <StyledTableCell align="right">{row.Status}</StyledTableCell>
+              <StyledTableCell align="center">{row.Username}</StyledTableCell>
+              <StyledTableCell align="center">{row.Email}</StyledTableCell>
+              <StyledTableCell align="center">{row.Phone}</StyledTableCell>
+              <StyledTableCell align="center">{row.Price}</StyledTableCell>
+              <StyledTableCell align="center">{row.Status}</StyledTableCell>
             
             </StyledTableRow>
             
