@@ -14,11 +14,17 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import styles from '../../styles/adminOrderlist.module.css'
-import { FormHelperText } from '@material-ui/core';
+import { FormHelperText, Typography } from '@material-ui/core';
 import Tablelist from '../../components/containers/Order_list'
 import Dashboard from '../../components/containers/dashBoard';
+import UserList from '../../components/containers/user_list';
+import PeopleIcon from '@material-ui/icons/People';
 import Product_list from '../../components/containers/Product_list';
 import { red } from '@material-ui/core/colors';
+import AddIcon from '@material-ui/icons/Add';
+import Button from '@material-ui/core/Button';
+
+
 const useStyles = makeStyles((theme) => ({
    nested: {
       paddingLeft: theme.spacing(4),
@@ -36,6 +42,13 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom:50,
       paddingTop:50,
    },
+   pageTitle: {
+      paddingBottom:30,
+   },
+   btnProduct: {
+      paddingBottom: 50,
+      
+   }
 }));
 
 
@@ -66,17 +79,23 @@ export default function AdminOrderList() {
                   >
                      <ListItem button onClick={() => setMenu(0)}>
                         <ListItemIcon>
+                           <PeopleIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="All User" />
+                     </ListItem>
+                     <ListItem button onClick={() => setMenu(1)}>
+                        <ListItemIcon>
                            <AddShoppingCartIcon />
                         </ListItemIcon>
                         <ListItemText primary="All Order" />
                      </ListItem>
-                     <ListItem button onClick={() => setMenu(1)}>
+                     <ListItem button onClick={() => setMenu(2)}>
                         <ListItemIcon>
                            <ShoppingBasketIcon />
                         </ListItemIcon>
                         <ListItemText primary="All Product" />
                      </ListItem>
-                     <ListItem button onClick={() => setMenu(2)}>
+                     <ListItem button onClick={() => setMenu(3)}>
                         <ListItemIcon>
                            <DashboardIcon />
                         </ListItemIcon>
@@ -86,18 +105,33 @@ export default function AdminOrderList() {
 
                </Grid>
                 <Grid item xs={7} sm={9} className={classes.pages}>
+                     <Typography className={classes.pageTitle}>Catagories</Typography>
 
+                     <div className={classes.btnProduct}>
+                        <Button
+                           variant="contained"
+                           color="secondary"
+                           startIcon={<AddIcon />}
+                        >
+                           Add Products
+                        </Button>
+                     </div>
                   {menu === 0 &&
                      <>
-                      <Tablelist/>
+                      <UserList/>
                      </>
                   }
                   {menu === 1 &&
                      <>
-                        <Product_list/>
+                      <Tablelist/>
                      </>
                   }
                   {menu === 2 &&
+                     <>
+                        <Product_list/>
+                     </>
+                  }
+                  {menu === 3 &&
                      <>
                        <Dashboard/>
                      </>

@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from '../../styles/adminOrderlist.module.css'
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -12,6 +13,14 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 
+export async function getStaticProps() {
+  const user = await fetch('http://localhost:8000/api/users')
+  const userdata = await user.json()
+  return {
+    
+    props: {userdata },
+  }
+}
 const StyledTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: '#EFFDFF',
@@ -37,14 +46,10 @@ const StyledTableRow = withStyles((theme) => ({
 
 }))(TableRow);
 
-function createData(Image, Name, Price, Quantity,Stock,Status) {
-  return { Image, Name, Price, Quantity,Stock,Status };
-}
+// function createData( ID, Name, Gender,Phonenumber,Email ,Password,Status) {
+//   // return { ID, Name, Gender,Phonenumber,Email ,Password,Status};
+// }
 
-const rows = [
-  createData('Image', 'Shoes', '50$', '550','In stock',),
-  createData('Image', 'Shoes', '50$', '550','In stock',),
-];
 
 const useStyles = makeStyles({
   table: {
@@ -53,7 +58,7 @@ const useStyles = makeStyles({
 });
 
 
-export default function Product_list (){
+export default function UserList ({userdata}){
   const classes = useStyles();
  return(
  <div>
@@ -62,27 +67,28 @@ export default function Product_list (){
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow className={styles.header}>
-            <StyledTableCell>Image</StyledTableCell>
-            <StyledTableCell align="center">ID/Name</StyledTableCell>
-            <StyledTableCell align="center">Price</StyledTableCell>
-            <StyledTableCell align="center">Quantity</StyledTableCell>
-            <StyledTableCell align="center">Stock</StyledTableCell>
+            <StyledTableCell align="center">ID</StyledTableCell>
+            <StyledTableCell align="center">Name</StyledTableCell>
+            <StyledTableCell align="center">Gender</StyledTableCell>
+            <StyledTableCell align="center">Phone Number</StyledTableCell>
+            <StyledTableCell align="center">Email</StyledTableCell>
+            <StyledTableCell align="center" type="password">Password</StyledTableCell>
             <StyledTableCell align="center">Status</StyledTableCell>
         
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.Image}
-              </StyledTableCell>
-              <StyledTableCell align="center">{row.Name}</StyledTableCell>
-              <StyledTableCell align="center">{row.Price}</StyledTableCell>
-              <StyledTableCell align="center">{row.Quantity}
-              </StyledTableCell>
-              <StyledTableCell align="center">{row.Stock}</StyledTableCell>
-              <StyledTableCell align="center">{row.Status}
+          {
+          userdata.map((user) => {
+            return(
+            <StyledTableRow key={user.user}>
+              <StyledTableCell align="center" ID={user.id} ></StyledTableCell>
+              <StyledTableCell align="center" Name={user.user}></StyledTableCell>
+              <StyledTableCell align="center" Gender={user.gender}></StyledTableCell>
+              <StyledTableCell align="center" Phonenumber={user.phoneNumber}></StyledTableCell>
+              <StyledTableCell align="center" Email={user.email}></StyledTableCell>
+              <StyledTableCell align="center" Password={user.password}></StyledTableCell>
+              <StyledTableCell align="center" Status={user.Status}>
               <ButtonGroup disableElevation variant="contained" color="secondary">
               <Button
                 variant="contained"
@@ -106,8 +112,9 @@ export default function Product_list (){
             </StyledTableRow>
             
             
-            
-          ))}
+          )
+          })
+        }
         </TableBody>
       </Table>
     </TableContainer>

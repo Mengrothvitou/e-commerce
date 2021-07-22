@@ -69,6 +69,17 @@ const SignUp = () => {
             </input>
             {errors.Password && <span className={style.message}>{errors.Password.message}</span>}
             <br></br>
+            <label className={style.label}>Phone Number:</label>
+            <input 
+              type="number"
+              placeholder="Enter phone number" 
+              className={style.input1} 
+              name="phonenumber" 
+              ref={register({
+                required: "Phone Number is required"
+              })}>
+            </input>
+            {errors.phonenumber && <span className={style.message}>{errors.phonenumber.message}</span>}
             <button type="submit" className={style.signupbtn}>Create account</button>
           </form>
           <div className={style.account}>

@@ -139,9 +139,11 @@
 }
 .account{
     text-align: center;
+
 }
 .accountText{
     margin: 5px;
+    padding-bottom: 15px;
 }
 @media screen and (max-width: 600px) {
     .mainSign,.img{

@@ -28,7 +28,7 @@ function Navbar(){
         router.push("contact")
     }
     const Admin=()=>{
-        router.push("Admin")
+        router.push("admin/adminorderlist")
     }
 
     const {keySearchs,setKeySearchs} = React.useContext(SearchContext)
