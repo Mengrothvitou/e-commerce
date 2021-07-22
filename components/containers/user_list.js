@@ -13,12 +13,37 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 
-export async function getStaticProps() {
-  const user = await fetch('http://localhost:8000/api/users')
-  const userdata = await user.json()
-  return {
-    
-    props: {userdata },
+
+const handleDeleteUser=async(id)=>{
+  try {
+    const res = await fetch(
+      `http://localhost:8000/api/users/${{id}}`,
+      {
+        method: 'DELETE',
+      }
+    ).then((res)=>{
+      console.log("User deleted")
+    })
+    console.log(res)
+  }catch(err){
+    console.log(err)
+  }
+}
+const handleUpdateUser=async(id)=>{
+  try {
+    const res = await fetch(
+      `http://localhost:8000/api/users/${{id}}`,
+      {
+        method: 'put',
+        header: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({"name": '1-2',"email":"tou@gmail.com"})
+      }
+    ).then((res)=>{
+      console.log("User Updated")
+    })
+    console.log(res)
+  }catch(err){
+    console.log(err)
   }
 }
 const StyledTableCell = withStyles((theme) => ({
@@ -58,8 +83,20 @@ const useStyles = makeStyles({
 });
 
 
-export default function UserList ({userdata}){
+export default function UserList (){
   const classes = useStyles();
+  const [userData, setUsers]=React.useState([])
+    React.useEffect(()=>{
+        fetch("http://localhost:8000/api/users")
+        .then(res=>res.json())
+        .then((res)=>{
+            setUsers(res)
+            console.log(res);
+        }).catch((err)=>{
+            setUsers([])
+            console.log(err);
+        })
+    })
  return(
  <div>
     
@@ -79,34 +116,36 @@ export default function UserList ({userdata}){
         </TableHead>
         <TableBody>
           {
-          userdata.map((user) => {
+          userData.map((user,index) => {
             return(
-            <StyledTableRow key={user.user}>
-              <StyledTableCell align="center" ID={user.id} ></StyledTableCell>
-              <StyledTableCell align="center" Name={user.user}></StyledTableCell>
-              <StyledTableCell align="center" Gender={user.gender}></StyledTableCell>
-              <StyledTableCell align="center" Phonenumber={user.phoneNumber}></StyledTableCell>
-              <StyledTableCell align="center" Email={user.email}></StyledTableCell>
-              <StyledTableCell align="center" Password={user.password}></StyledTableCell>
-              <StyledTableCell align="center" Status={user.Status}>
-              <ButtonGroup disableElevation variant="contained" color="secondary">
-              <Button
-                variant="contained"
-                color="secondary"
-                className={classes.button}
-                startIcon={<DeleteIcon />}
-              >
-                Delete
-              </Button>
-              <Button
-                variant="contained"
-                color="secondary"
-                className={classes.button}
-                startIcon={<EditIcon />}
-              >
-                Edit
-              </Button>
-              </ButtonGroup>
+            <StyledTableRow key={user._id}>
+              <StyledTableCell align="center" >{user._id}</StyledTableCell>
+              <StyledTableCell align="center" >{user.username}</StyledTableCell>
+              <StyledTableCell align="center" >{user.gender}</StyledTableCell>
+              <StyledTableCell align="center" >{user.phoneNumber}</StyledTableCell>
+              <StyledTableCell align="center" >{user.email}</StyledTableCell>
+              <StyledTableCell align="center" >{user.password}</StyledTableCell>
+            <StyledTableCell align="center" >{user.Status}
+                <ButtonGroup disableElevation variant="contained" color="secondary">
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  className={classes.button}
+                  startIcon={<DeleteIcon />}
+                  onClick={()=>handleDeleteUser(user._id)}
+                >
+                  Delete
+                </Button>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  className={classes.button}
+                  startIcon={<EditIcon />}
+                  onClick={()=>handleUpdateUser(user._id)}
+                >
+                  Edit
+                </Button>
+                </ButtonGroup>
               </StyledTableCell>
             
             </StyledTableRow>
