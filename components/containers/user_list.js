@@ -12,6 +12,7 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
+import AddUser from '../presentations/fromAddUser';
 
 
 const handleDeleteUser=async(id)=>{
@@ -99,7 +100,7 @@ export default function UserList (){
     })
  return(
  <div>
-    
+    <AddUser/>
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead>

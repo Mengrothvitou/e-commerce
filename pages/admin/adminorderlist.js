@@ -107,15 +107,7 @@ export default function AdminOrderList() {
                 <Grid item xs={7} sm={9} className={classes.pages}>
                      <Typography className={classes.pageTitle}>Catagories</Typography>
 
-                     <div className={classes.btnProduct}>
-                        <Button
-                           variant="contained"
-                           color="secondary"
-                           startIcon={<AddIcon />}
-                        >
-                           Add Products
-                        </Button>
-                     </div>
+
                   {menu === 0 &&
                      <>
                       <UserList/>

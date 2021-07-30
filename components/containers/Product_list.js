@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
-
+import AddProduct from '../presentations/formAddProduct';
 const StyledTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: '#EFFDFF',
@@ -55,8 +55,10 @@ const useStyles = makeStyles({
 
 export default function Product_list (){
   const classes = useStyles();
+  
  return(
  <div>
+    <AddProduct/>
     
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
