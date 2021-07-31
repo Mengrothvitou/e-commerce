@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from '../../styles/adminOrderlist.module.css'
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -11,6 +12,40 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
+
+const handleDeleteProduct=async(id)=>{
+  try {
+    const res = await fetch(
+      `http://localhost:8000/api/bags/${id}`,
+      {
+        method: 'delete',
+      }
+    ).then((res)=>{
+      console.log("Product deleted")
+      alert("Product deleted")
+    })
+    console.log(res)
+  }catch(err){
+    console.log(err)
+  }
+}
+const handleUpdateProduct=async(id)=>{
+  try {
+    const res = await fetch(
+      `http://localhost:8000/api/bags/${{id}}`,
+      {
+        method: 'put',
+        header: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({"tou": '1-2',"tou@gmail.com":"tou@gmail.com"})
+      }
+    ).then((res)=>{
+      console.log("Product Updated")
+    })
+    console.log(res)
+  }catch(err){
+    console.log(err)
+  }
+}
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -37,14 +72,7 @@ const StyledTableRow = withStyles((theme) => ({
 
 }))(TableRow);
 
-function createData(Image, Name, Price, Quantity,Stock,Status) {
-  return { Image, Name, Price, Quantity,Stock,Status };
-}
 
-const rows = [
-  createData('Image', 'Shoes', '50$', '550','In stock',),
-  createData('Image', 'Shoes', '50$', '550','In stock',),
-];
 
 const useStyles = makeStyles({
   table: {
@@ -54,6 +82,79 @@ const useStyles = makeStyles({
 
 
 export default function Product_list (){
+      const [bagData, setbags]=React.useState([])
+        React.useEffect(()=>{
+            fetch("http://localhost:8000/api/bags")
+            .then(res=>res.json())
+            .then((res)=>{
+                setbags(res)
+                console.log(res);
+            }).catch((err)=>{
+                setbags([])
+                console.log(err);
+            })
+        })
+    //    const [bookData, setbooks]=React.useState([])
+    // React.useEffect(()=>{
+    //     fetch("http://localhost:8000/api/books")
+    //     .then(res=>res.json())
+    //     .then((res)=>{
+    //         setbooks(res)
+    //         console.log(res);
+    //     }).catch((err)=>{
+    //         setbooks([])
+    //         console.log(err);
+    //     })
+    // })
+    //    const [shoeData, setshoes]=React.useState([])
+    // React.useEffect(()=>{
+    //     fetch("http://localhost:8000/api/bags")
+    //     .then(res=>res.json())
+    //     .then((res)=>{
+    //         setshoes(res)
+    //         console.log(res);
+    //     }).catch((err)=>{
+    //         setshoes([])
+    //         console.log(err);
+    //     })
+    // })
+    //    const [clotheData, setclothes]=React.useState([])
+    // React.useEffect(()=>{
+    //     fetch("http://localhost:8000/api/bags")
+    //     .then(res=>res.json())
+    //     .then((res)=>{
+    //         setclothes(res)
+    //         console.log(res);
+    //     }).catch((err)=>{
+    //         setclothes([])
+    //         console.log(err);
+    //     })
+    // })
+    //    const [watchData, setwatchs]=React.useState([])
+    // React.useEffect(()=>{
+    //     fetch("http://localhost:8000/api/bags")
+    //     .then(res=>res.json())
+    //     .then((res)=>{
+    //         setwatchs(res)
+    //         console.log(res);
+    //     }).catch((err)=>{
+    //         setwatchs([])
+    //         console.log(err);
+    //     })
+    // })
+    //    const [cosmeticData, setcosmetics]=React.useState([])
+    // React.useEffect(()=>{
+    //     fetch("http://localhost:8000/api/bags")
+    //     .then(res=>res.json())
+    //     .then((res)=>{
+    //         setcosmetics(res)
+    //         console.log(res);
+    //     }).catch((err)=>{
+    //         setcosmetics([])
+    //         console.log(err);
+    //     })
+    // })
+  console.log(bagData)
   const classes = useStyles();
  return(
  <div>
@@ -63,46 +164,48 @@ export default function Product_list (){
         <TableHead>
           <TableRow className={styles.header}>
             <StyledTableCell>Image</StyledTableCell>
-            <StyledTableCell align="center">ID/Name</StyledTableCell>
+            <StyledTableCell align="center">ID</StyledTableCell>
+            <StyledTableCell align="center">Name</StyledTableCell>
             <StyledTableCell align="center">Price</StyledTableCell>
-            <StyledTableCell align="center">Quantity</StyledTableCell>
+            <StyledTableCell align="center">Type</StyledTableCell>
             <StyledTableCell align="center">Stock</StyledTableCell>
             <StyledTableCell align="center">Status</StyledTableCell>
         
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
+          {bagData.map((user) => (
+            <StyledTableRow key={user.title}>
               <StyledTableCell component="th" scope="row">
-                {row.Image}
+                <img src={user.image} style={{height:30,width:30}}/>
               </StyledTableCell>
-              <StyledTableCell align="center">{row.Name}</StyledTableCell>
-              <StyledTableCell align="center">{row.Price}</StyledTableCell>
-              <StyledTableCell align="center">{row.Quantity}
+              <StyledTableCell align="center">{user._id}</StyledTableCell>
+              <StyledTableCell align="center">{user.title}</StyledTableCell>
+              <StyledTableCell align="center">{user.price}</StyledTableCell>
+              <StyledTableCell align="center">{user.type}</StyledTableCell>
+              <StyledTableCell align="center">{user.Stock}</StyledTableCell>
+              <StyledTableCell align="center">{user.Status}
+                <ButtonGroup disableElevation variant="contained" color="secondary">
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  className={classes.button}
+                  startIcon={<DeleteIcon />}
+                  onClick={()=>handleDeleteProduct(user._id)}
+                >
+                  Delete
+                </Button>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  className={classes.button}
+                  startIcon={<EditIcon />}
+                  onClick={()=>handleDeleteProduct(user._id)}
+                >
+                  Edit
+                </Button>
+                </ButtonGroup>
               </StyledTableCell>
-              <StyledTableCell align="center">{row.Stock}</StyledTableCell>
-              <StyledTableCell align="center">{row.Status}
-              <ButtonGroup disableElevation variant="contained" color="secondary">
-              <Button
-                variant="contained"
-                color="secondary"
-                className={classes.button}
-                startIcon={<DeleteIcon />}
-              >
-                Delete
-              </Button>
-              <Button
-                variant="contained"
-                color="secondary"
-                className={classes.button}
-                startIcon={<EditIcon />}
-              >
-                Edit
-              </Button>
-              </ButtonGroup>
-              </StyledTableCell>
-            
             </StyledTableRow>
             
             

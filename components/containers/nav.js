@@ -40,28 +40,28 @@ function Navbar(){
    
 
     const clothes=()=>{
-        router.push("clothes")
+        router.push("./../../clothes")
     }
     const shoe=()=>{
-        router.push("shoe")
+        router.push("./../../shoe")
     }
     const bag=()=>{
-        router.push("bag")
+        router.push("./../../bag")
     }
     const cosmetic=()=>{
-        router.push("cosmetic")
+        router.push("./../../cosmetic")
     }
     const home=()=>{
-        router.push("home")
+        router.push("./../../home")
     }
     const watch=()=>{
-        router.push("watch")
+        router.push("./../../watch")
     }
     const books=()=>{
-        router.push("books")
+        router.push("./../../books")
     }
     const admin=()=>{
-        router.push("admin")
+        router.push("./../../admin")
     }
 
 
@@ -82,8 +82,8 @@ function Navbar(){
                         <a style={{color: 'black'}} className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Products
                         </a>
-                        <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a style={{cursor:'pointer', color: 'black'}} className="dropdown-item" activeClassName onClick={clothes}>Clothes</a></li>
+                        <ul className="dropdown-menu dropdown-menu-dark" aria-labelled="navbarDarkDropdownMenuLink">
+                            <li><a style={{cursor:'pointer', color: 'black'}} className="dropdown-item" onClick={clothes}>Clothes</a></li>
                             <li><a style={{cursor:'pointer', color: 'black'}} className="dropdown-item" onClick={shoe}>Shoes</a></li>
                             <li><a style={{cursor:'pointer', color: 'black'}} className="dropdown-item" onClick={books}>Books</a></li>
                             <li><a style={{cursor:'pointer', color: 'black'}} className="dropdown-item" onClick={bag}>Bags</a></li>
@@ -92,16 +92,13 @@ function Navbar(){
                         </ul>
                         </li>
                         <li>
-                            <a style={{cursor: 'pointer', color: 'black'}} className="nav-link" aria-current="page" onClick={admin}>Admin</a>
+                            <a style={{cursor: 'pointer', color: 'black'}} className="nav-link" aria-current="page" onClick={Admin}>Admin</a>
                         </li>
                         <li className="nav-item">
                             <a style={{cursor:'pointer', color: 'black'}} className="nav-link" aria-current="page" onClick={about}>About Us</a>
                         </li>
                         <li className="nav-item">
                             <a style={{cursor:'pointer', color: 'black'}} className="nav-link" aria-current="page" onClick={contact}>Contact Us</a>
-                        </li>
-                        <li className="nav-item">
-                            <a style={{cursor:'pointer'}} className="nav-link" aria-current="page" onClick={Admin}>Admin</a>
                         </li>
                     </ul>
                     <form onChange ={handleSearch} style={{marginRight:20, marginTop:1}}>

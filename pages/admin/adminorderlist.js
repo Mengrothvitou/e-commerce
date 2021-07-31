@@ -21,8 +21,6 @@ import UserList from '../../components/containers/user_list';
 import PeopleIcon from '@material-ui/icons/People';
 import Product_list from '../../components/containers/Product_list';
 import { red } from '@material-ui/core/colors';
-import AddIcon from '@material-ui/icons/Add';
-import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -106,16 +104,6 @@ export default function AdminOrderList() {
                </Grid>
                 <Grid item xs={7} sm={9} className={classes.pages}>
                      <Typography className={classes.pageTitle}>Catagories</Typography>
-
-                     <div className={classes.btnProduct}>
-                        <Button
-                           variant="contained"
-                           color="secondary"
-                           startIcon={<AddIcon />}
-                        >
-                           Add Products
-                        </Button>
-                     </div>
                   {menu === 0 &&
                      <>
                       <UserList/>

@@ -9,8 +9,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
-
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import IconButton from '@material-ui/core/IconButton';
 
 const TextImage = ({image,title,price,onclick,onclick1,isFavorite,}) => {
     const actived={
@@ -25,9 +26,8 @@ const TextImage = ({image,title,price,onclick,onclick1,isFavorite,}) => {
 }
 const useStyles = makeStyles({
     root: {
-        Width: 150,
-        height: 'auto',
-        marginTop:40,
+        maxWidth: 345,
+        margin: 0,
     },
     CardContent: {
         textAlign: 'center',
@@ -42,6 +42,9 @@ const useStyles = makeStyles({
     CardAction: {
         justifyContent: 'center'
     },
+    action:{
+        justifyContent: 'center'
+    }
   });
 const classes = useStyles();
     return(
@@ -65,7 +68,7 @@ const classes = useStyles();
                 component="img"
                 alt={title}
                 width="200"
-                height="300"
+                height="200"
                 image={image}
                 title={title}
                 />
@@ -78,11 +81,17 @@ const classes = useStyles();
                 </Typography>
                 </CardContent>
             </CardActionArea>
-            <CardActions>
-                <div style={{justifyContent: 'center',margin: 'auto'}}>
+            <CardActions className={classes.action}>
+                {/* <div style={{justifyContent: 'center',margin: 'auto'}}>
                     <Button onClick={onclick} className={style.btn}><FaCartPlus className={style.pluscart} /></Button>
                     <MdFavorite onClick={onclick1} style={isFavorite?actived:unactived} className={style.heart}/>
-                </div>
+                </div> */}
+                <IconButton aria-label="add to favorites">
+                    <FavoriteIcon style={isFavorite?actived:unactived} onClick={onclick1} />
+                </IconButton>
+                <IconButton aria-label="cart">
+                    <AddShoppingCartIcon onClick={onclick} style={{color: 'black'}}/>
+                </IconButton>
             </CardActions>
         </Card>
       

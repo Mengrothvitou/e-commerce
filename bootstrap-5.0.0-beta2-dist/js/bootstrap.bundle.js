@@ -1462,8 +1462,8 @@
       var nextElementIndex = this._getItemIndex(nextElement);
 
       var isCycling = Boolean(this._interval);
-      var directionalClassName = direction === DIRECTION_NEXT ? CLASS_NAME_START : CLASS_NAME_END;
-      var orderClassName = direction === DIRECTION_NEXT ? CLASS_NAME_NEXT : CLASS_NAME_PREV;
+      var directionalclassName = direction === DIRECTION_NEXT ? CLASS_NAME_START : CLASS_NAME_END;
+      var orderclassName = direction === DIRECTION_NEXT ? CLASS_NAME_NEXT : CLASS_NAME_PREV;
       var eventDirectionName = direction === DIRECTION_NEXT ? DIRECTION_LEFT : DIRECTION_RIGHT;
 
       if (nextElement && nextElement.classList.contains(CLASS_NAME_ACTIVE$1)) {
@@ -1493,15 +1493,15 @@
       this._activeElement = nextElement;
 
       if (this._element.classList.contains(CLASS_NAME_SLIDE)) {
-        nextElement.classList.add(orderClassName);
+        nextElement.classList.add(orderclassName);
         reflow(nextElement);
-        activeElement.classList.add(directionalClassName);
-        nextElement.classList.add(directionalClassName);
+        activeElement.classList.add(directionalclassName);
+        nextElement.classList.add(directionalclassName);
         var transitionDuration = getTransitionDurationFromElement(activeElement);
         EventHandler.one(activeElement, 'transitionend', function () {
-          nextElement.classList.remove(directionalClassName, orderClassName);
+          nextElement.classList.remove(directionalclassName, orderclassName);
           nextElement.classList.add(CLASS_NAME_ACTIVE$1);
-          activeElement.classList.remove(CLASS_NAME_ACTIVE$1, orderClassName, directionalClassName);
+          activeElement.classList.remove(CLASS_NAME_ACTIVE$1, orderclassName, directionalclassName);
           _this5._isSliding = false;
           setTimeout(function () {
             EventHandler.trigger(_this5._element, EVENT_SLID, {
