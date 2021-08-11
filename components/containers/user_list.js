@@ -15,47 +15,10 @@ import EditIcon from '@material-ui/icons/Edit';
 import PublishIcon from '@material-ui/icons/Publish';
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 import AddIcon from '@material-ui/icons/Add';
+import AddUser from './../presentations/fromAddUser'
+import Typography from '@material-ui/core/Typography';
+import AlertDialog from '../presentations/alertDialog';
 
-// const handleUploadFile=(e)=>{
-//   e.preventDefault();
-//   const file = e.target.files[0]
-//   const storageRef = fireStorage.ref('uploads/');
-//   const fileRef= storageRef.child(file.name);
-//   fileRef.put(file)
-//   .then((res)=>{
-//     console.info(res)
-//   }).catch((err)=>{
-//     console.error(err)
-//   })
-// }
-
-// const viewFile=(e)=>{
-//   e.preventDefault()
-//   const storageRef = fireStorage.ref();
-//   const fileRef= storageRef.child("13.PNG");
-//     fileRef.getDownloadURL()
-//   .then((res)=>{
-//     console.log("URL::",res);
-//     setUrl(res)
-//   })
-//   .catch(e=>{
-//     console.log(e)
-//   })
-// }
-
-// const handleDeleteFile = ( e ) =>{
-//   e.preventDefault()
-//   const storageRef = fireStorage.ref();
-//   const fileRef= storageRef.child("13.PNG");
-//     fileRef.delete()
-//   .then((res)=>{
-//     console.log("URL::",res);
-//     setUrl(res)
-//   })
-//   .catch(e=>{
-//     console.log(e)
-//   })
-// }
 
 const handleDeleteUser=async(id)=>{
   try {
@@ -90,24 +53,7 @@ const handleUpdateUser=async(id)=>{
     console.log(err)
   }
 }
-const handleCreateUser=async(id)=>{
-  try{
-    const res = await fetch(
-     `http://localhost:8000/api/users/${{id}}`,
-     {
-        method: 'post',
-        header: { 'Content-Type': 'application/json'},
-        body: JSON.stringify({
-          "tou": '1-2',"tou@gmail.com":"tou@gmail.com"
-          })
-     }
-    ).then((res)=>{
-      console.log("User Created")
-    })
-  }catch(err){
-    console.log(err)
-  }
-}
+
 const StyledTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: '#EFFDFF',
@@ -139,6 +85,9 @@ const useStyles = makeStyles({
   table: {
     minWidth: 500,
   },
+  head:{
+    backgroundColor: 'skyblue'
+  }
 });
 
 
@@ -146,37 +95,38 @@ export default function UserList (){
   const classes = useStyles();
   const [userData, setUsers]=React.useState([])
     React.useEffect(()=>{
+      let unmounted= false;
         fetch("http://localhost:8000/api/users")
         .then(res=>res.json())
         .then((res)=>{
+          if(!unmounted){
             setUsers(res)
             console.log(res);
+          }
+           
         }).catch((err)=>{
             setUsers([])
             console.log(err);
         })
-    })
+        return ()=> {unmounted= true}
+    },[])
  return(
  <div>
-    <Button
-      variant="contained"
-      color="secondary"
-      startIcon={<AddIcon />}
-      align="center"
-      onClick={()=>handleCreateUser}
-      >
-      Add User
-    </Button>
+    <Typography style={{ cursor: 'move', fontSize: 24, }}>
+      User List
+    </Typography>
+    <AddUser />
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
-          <TableRow className={styles.header}>
+          <TableRow className={styles.head}>
             <StyledTableCell align="center">Profile</StyledTableCell>
             <StyledTableCell align="center">ID</StyledTableCell>
             <StyledTableCell align="center">Name</StyledTableCell>
             <StyledTableCell align="center">Gender</StyledTableCell>
+            <StyledTableCell align="center">Phone Number</StyledTableCell>
             <StyledTableCell align="center">Email</StyledTableCell>
-            <StyledTableCell align="center" type="password">Password</StyledTableCell>
+            <StyledTableCell align="center">Password</StyledTableCell>
             <StyledTableCell align="center">Status</StyledTableCell>
         
           </TableRow>
@@ -187,15 +137,15 @@ export default function UserList (){
             return(
             <StyledTableRow key={user._id}>
               <StyledTableCell align="center" >
-                <img src={user.avatar} style={{width:30, height:30,}}></img>
+                <img src={user.avatar}style={{height:50,width:50}} />
               </StyledTableCell>
               <StyledTableCell align="center" >{user._id}</StyledTableCell>
-              <StyledTableCell align="center" >{user.username}</StyledTableCell>
+              <StyledTableCell align="center" >{user.userName}</StyledTableCell>
               <StyledTableCell align="center" >{user.gender}</StyledTableCell>
               <StyledTableCell align="center" >{user.phoneNumber}</StyledTableCell>
               <StyledTableCell align="center" >{user.email}</StyledTableCell>
+              <StyledTableCell align="center" type="password">{user.password}</StyledTableCell>
             <StyledTableCell align="center" >{user.Status}
-                <ButtonGroup disableElevation variant="contained" color="secondary">
                 <Button
                   variant="contained"
                   color="secondary"
@@ -205,16 +155,16 @@ export default function UserList (){
                 >
                   Delete
                 </Button>
+                {/* <AlertDialog /> */}
                 <Button
                   variant="contained"
-                  color="secondary"
+                  color="primary"
                   className={classes.button}
                   startIcon={<EditIcon />}
                   onClick={()=>handleUpdateUser(user._id)}
                 >
                   Edit
                 </Button>
-                </ButtonGroup>
               </StyledTableCell>
             
             </StyledTableRow>

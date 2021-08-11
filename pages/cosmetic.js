@@ -10,7 +10,7 @@ import {SearchContext} from './../context/SearchContext'
 import {useToasts} from 'react-toast-notifications'
 import Grid from '@material-ui/core/Grid';
 export async function getStaticProps() {
-    const cosmetic = await fetch('http://localhost:8000/api/Cosmetics')
+    const cosmetic = await fetch('http://localhost:8000/api/products?type=Cosmetics')
     const cosmeticdata = await cosmetic.json()
     return {
       
@@ -18,111 +18,6 @@ export async function getStaticProps() {
     }
   }
 
-
-///   const Products = [
-//     {
-//         img: 'cosmetic2.jpeg',
-//         title: 'BB cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmetic3.jpeg',
-//         title: 'lipstick ',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmetic1.jpeg',
-//         title: 'eyelinner',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmetic4.jpeg',
-//         title: 'sleeping mask',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-
-//     {
-//         img: 'cosmet5.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet6.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet7.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet8.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet9.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet10.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet11.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet12.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet13.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet14.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet15.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'cosmet16.jpg',
-//         title: 'Night cream',
-//         price: 12.99,
-//         isFavorite: false,
-//     },
-
-// ]
-    
-    
-
-// ]
 
 export default function Bag({cosmeticdata}){
     const {addToast}=useToasts()

@@ -10,7 +10,7 @@ import {SearchContext} from './../context/SearchContext'
 import {useToasts} from 'react-toast-notifications'
 import Grid from '@material-ui/core/Grid';
 export async function getStaticProps() {
-    const clothe = await fetch('http://localhost:8000/api/Clothes')
+    const clothe = await fetch('http://localhost:8000/api/products?type=Clothes')
     const clothedata = await clothe.json()
     return {
       
@@ -18,109 +18,6 @@ export async function getStaticProps() {
     }
   }
 
-
-//   const Products = [
-//     {
-//         img: 'clo1.jpg',
-//         title: 'jacket',
-//         price: 8.99 ,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo2.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo3.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo4.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo5.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo6.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo7.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,isFavorite: false,
-
-//     },
-//     {
-//         img: 'clo8.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,isFavorite: false,
-
-//     },
-//     {
-//         img: 'clo9.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo10.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo11.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-
-//     },
-//     {
-//         img: 'clo12.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo13.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo14.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo15..jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-//     {
-//         img: 'clo16.jpg',
-//         title: 'T-shirt',
-//         price: 8.99,
-//         isFavorite: false,
-//     },
-    
-    
-
-// ]
 
 export default function Bag({clothedata}){
     const {addToast}=useToasts()

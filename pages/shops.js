@@ -3,6 +3,8 @@ import {ProductContext} from '../context/ProductContext'
 import TextImage from "../components/presentations/text_img"
 import {useEffect} from 'react'
 import {useToasts} from 'react-toast-notifications'
+import Grid from '@material-ui/core/Grid';
+
 const Shop =() =>{
     const {addToast}=useToasts();
     const {cards, setCards}=useContext(ProductContext);
@@ -48,14 +50,21 @@ const Shop =() =>{
     return(
         <div>
             <h1 style={{fontFamily:'Rationale,serif-sans',textAlign:'center',marginTop:'12px',marginBottom:'5px',borderBottom:'2px solid grey',borderScale:'1px',width:'100px',margin:'auto'}}>Shops</h1>
-                {cards.map((shop,index)=>{
-                    return(
-                        <div>
-                            <TextImage src={shop.img} title={shop.title} price={shop.price}/>
-                        </div>
-                        
+                    <Grid container justify="center" spacing={3}>
+            {
+                        cards.map((shop) => {
+                      return (
+                        <Grid item xs={10} sm={5} md={3} style={{marginTop: 15,marginBottom: 10,}}>
+                            <TextImage 
+                                image={shop.image} 
+                                title={shop.title} 
+                                price={shop.price}  />
+                        </Grid>
                         )
-                    })}
+
+                      })                      
+                  }
+                </Grid>
                    <div style={container}>
                        {cards.length>0 ?(<span style={price}>Your total price: {Totals}</span>):(<span style={price}>Your cart is empty</span>)}
                    </div>

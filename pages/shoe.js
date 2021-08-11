@@ -5,142 +5,19 @@ import {ProductContext} from '../context/ProductContext'
 import Slider from './../components/presentations/slider'
 import style from './../styles/title.module.css'
 import {FavoriteContext} from '../context/FavoriteContext'
+
 import {useEffect} from 'react' 
 import {SearchContext} from './../context/SearchContext'
 import {useToasts} from 'react-toast-notifications'
 import Grid from '@material-ui/core/Grid';
 export async function getStaticProps() {
-    const shoe = await fetch('http://localhost:8000/api/Shoes')
+    const shoe = await fetch('http://localhost:8000/api/products?type=Shoes')
     const shoedata = await shoe.json()
     return {
       
       props: { shoedata },
     }
   }
-
-
-  //const Products=[
-    //     {
-    //         img:'shoes5.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes6.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes7.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes8.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes1..jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },  
-    //     {
-    //         img:'shoes2.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes3.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes4.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false
-    //     },
-    //     {
-    //         img:'shoes5.jpg',
-    //         title:'shoes',
-    //         price:'6.99$',
-    //         isFavorite: false
-    //     },
-    //     {
-    //         img:'shoes6.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes7.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes8.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes9.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes10.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes11.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes12.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes13.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    //     {
-    //         img:'shoes14.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },  {
-    //         img:'shoes15.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },  {
-    //         img:'shoes16.jpg',
-    //         title:'shoes',
-    //         price:'6.99',
-    //         isFavorite: false,
-    //     },
-    
-        
-    // ]
 
 export default function Bag({shoedata}){
     const {addToast}=useToasts()

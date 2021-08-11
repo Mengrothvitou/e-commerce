@@ -10,7 +10,7 @@ import {SearchContext} from './../context/SearchContext'
 import {useToasts} from 'react-toast-notifications'
 import Grid from '@material-ui/core/Grid';
 export async function getStaticProps() {
-    const watch = await fetch('http://localhost:8000/api/watches')
+    const watch = await fetch('http://localhost:8000/api/products?type=Watch')
     const watchdata = await watch.json()
     return {
       

@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-// import styles from './../../styles/adminOrderList.module.css' 
 import Avatar from '@material-ui/core/Avatar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
@@ -103,7 +102,6 @@ export default function AdminOrderList() {
 
                </Grid>
                 <Grid item xs={7} sm={9} className={classes.pages}>
-                     <Typography className={classes.pageTitle}>Catagories</Typography>
                   {menu === 0 &&
                      <>
                       <UserList/>

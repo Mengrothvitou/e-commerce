@@ -15,7 +15,7 @@ const Favorite =() =>{
                   {Favorite.map((Favorite,index)=>{
                       return(
                             <div>
-                               <TextImage src={Favorite.img} title={Favorite.title} price={Favorite.price} isFavorite={Favorite.isFavorite}/>
+                               <TextImage image={Favorite.img} title={Favorite.title} price={Favorite.price} isFavorite={Favorite.isFavorite}/>
                             </div>
                       )
                   })}

@@ -10,113 +10,13 @@ import {SearchContext} from './../context/SearchContext'
 import {useToasts} from 'react-toast-notifications'
 import Grid from '@material-ui/core/Grid';
 export async function getStaticProps() {
-    const book = await fetch('http://localhost:8000/api/Books')
+    const book = await fetch('http://localhost:8000/api/products?type=Book')
     const bookdata = await book.json()
     return {
       
       props: { bookdata },
     }
   }
-
-
-//   const Products=[
-//     {
-//         img:'book1.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book2.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book3.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book4.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book5.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book6.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book7.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book8.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book9.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book10.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book11.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book12.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book13.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book14.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book15.jpg',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-//     {
-//         img:'book16.webp',
-//         title:'book',
-//         price:'9.99',
-//         isFavorite: false,
-//     },
-// ]
 
 export default function Bag({bookdata}){
     const {addToast}=useToasts()

@@ -10,7 +10,7 @@ import {SearchContext} from './../context/SearchContext'
 import {useToasts} from 'react-toast-notifications'
 import Grid from '@material-ui/core/Grid';
 export async function getStaticProps() {
-    const bag = await fetch('http://localhost:8000/api/bags')
+    const bag = await fetch('http://localhost:8000/api/products?type=Bag')
     const bagdata = await bag.json()
     return {
       
@@ -47,7 +47,7 @@ export default function Bag({bagdata}){
 //   const handleSubmit = (e) => {
 //     console.log(e.target.value);
 //   };
-      
+
     return(
         
     <div>
@@ -57,13 +57,13 @@ export default function Bag({bagdata}){
                 <h2 className={style.title}>Bags</h2>
             </div>
             <div>
-                <Grid container justify="center" spacing={3}>
+              <Grid container justify="center" spacing={3}>
             {
                     // productdata.filter((item)=>item.title.includes(keySearchs)).map((item) => {
                         bagdata.map((item) => {
                       return (
-                        <Grid xs={10} sm={5} md={3} style={{marginTop: 15,marginBottom: 10,}}>
-                            <TextImage 
+                        <Grid item xs={12} sm={6} md={3}>
+                            <TextImage
                                 isFavorite={item.isFavorite} 
                                 image={item.image} 
                                 title={item.title} 
@@ -72,12 +72,11 @@ export default function Bag({bagdata}){
                                 onclick1={()=>addFavorite(item)} />
                         </Grid>
                         )
-
+                        
                       })                      
                   }
-                </Grid>
                   {/* {!statusExistData ? <span>Unmatch items</span>:<></>} */}
-                   
+                </Grid>
             </div>
         </div>
     </div>
