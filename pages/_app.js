@@ -1,4 +1,4 @@
-
+import React from 'react'
 import Head from 'next/head';
 import '../styles/globals.css'
 import Navbar from '../components/containers/nav'
@@ -10,14 +10,26 @@ import {FormContextProvider} from './../context/FormContext'
 import {ProductContextProvider} from './../context/ProductContext'
 import {FavoriteContextProvider} from './../context/FavoriteContext'
 import {SearchContextProvider} from './../context/SearchContext'
+import CssBaseline from "@material-ui/core/CssBaseline";
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
+  React.useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector("#jss-server-side");
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+  }, []);
+
   return (
     <SearchContextProvider>
     <ProductContextProvider>
       <FavoriteContextProvider>
       <ToastProvider>
+
         <div>
+        <CssBaseline />
           <Head>
             <title>Next Store</title>
             <link rel="icon" href="/logo2.jpg"/>
