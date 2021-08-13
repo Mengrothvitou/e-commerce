@@ -14,7 +14,7 @@ import {SearchContext} from './../../context/SearchContext'
 import { MdBorderBottom } from 'react-icons/md'
 function Navbar(){
     let iconStyles = { fontSize: "1.8em", marginLeft: "10px",marginRight: "10px",};
-    let textStyle = {cursor: 'pointer' , color: 'black' , fontFamily: 'Nunito,sans-serif'}
+    let textStyle = {cursor: 'pointer' , color: 'black' , fontFamily: 'Rationale',fontSize: 20}
     const router = useRouter()
     const user=()=>{
         router.push("./../../login")
@@ -83,7 +83,7 @@ function Navbar(){
                             <a style={textStyle} className="nav-link" aria-current="page" onClick={home}>Home</a>
                         </li>
                         <li className="nav-item dropdown">
-                        <a style={{color: 'black'}} className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a style={textStyle} className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Products
                         </a>
                         <ul className="dropdown-menu dropdown-menu-dark" aria-labelled="navbarDarkDropdownMenuLink">
@@ -96,13 +96,13 @@ function Navbar(){
                         </ul>
                         </li>
                         <li>
-                            <a style={{cursor: 'pointer', color: 'black'}} className="nav-link" aria-current="page" onClick={Admin}>Admin</a>
+                            <a style={textStyle} className="nav-link" aria-current="page" onClick={Admin}>Admin</a>
                         </li>
                         <li className="nav-item">
                             <a style={textStyle} className="nav-link" aria-current="page" onClick={about}>About Us</a>
                         </li>
                         <li className="nav-item">
-                            <a style={{cursor:'pointer', color: 'black',fontFamily: ''}} className="nav-link" aria-current="page" onClick={contact}>Contact Us</a>
+                            <a style={textStyle} className="nav-link" aria-current="page" onClick={contact}>Contact Us</a>
                         </li>
                     </ul>
                     <form onChange ={handleSearch} style={{marginRight:20, marginTop:1}}>

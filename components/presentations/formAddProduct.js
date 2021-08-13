@@ -24,6 +24,10 @@ const currencies = [
         label: 'Clothes',
     },
     {
+        value: 'Home',
+        label: 'Home',
+    },
+    {
         value: 'Cosmetic',
         label: 'Cosmetic',
     },
