@@ -17,10 +17,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   media: {
-    height: 100,
+    height: 300,
     width: '100%',
-    paddingTop: "56.25%", // 16:9
-    position:'relative',
   },
   btn:{
       justifyContent: 'center',
@@ -55,7 +53,7 @@ export default function TextImage({ image,title,price,onclick,onclick1,isFavorit
                 <Typography style={{fontWeight:'bold',fontSize: 24,textAlign: 'center',color: 'black',fontFamily: 'Calibri'}} variant="h5" align="center" component="h2">
                     {title}
                 </Typography>
-                <Typography style={{fontWeight:'bold',fontSize: 20,color: 'red',textAlign: 'center',fontFamily: 'Calibri'}} variant="h5" align="center" component="h2" className={classes.ContentPrice}>
+                <Typography style={{fontWeight:'bold',fontSize: 20,color: 'red',textAlign: 'center',fontFamily: 'Calibri'}} variant="h5" align="center" component="h2" >
                     {price}
                 </Typography>
             </CardContent>

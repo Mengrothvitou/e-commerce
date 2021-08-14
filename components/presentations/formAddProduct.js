@@ -203,9 +203,6 @@ export default function AddProduct() {
                                     label="Product Price"
                                     id="price"
                                     className={clsx(classes.margin, classes.textField)}
-                                    InputProps={{
-                                        startAdornment: <InputAdornment position="start">$</InputAdornment>,
-                                    }}
                                     variant="outlined"
                                 />
 

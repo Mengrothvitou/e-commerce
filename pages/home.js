@@ -71,8 +71,7 @@ const useStyles = makeStyles((theme) => ({
      marginTop:100,
    },
    Topsell:{
-    marginLeft:'2%',
-    fontFamily: 'Rationale',
+    marginLeft:'50px',
     fontSize:40,
    },
   
@@ -96,7 +95,7 @@ export default function Home({homedata}) {
               <img src ="/slider01.jfif" /></div>
           </Grid>
           <Grid item xs={7}>
-            <div className={classes.info}>
+            <Paper className={classes.info}>
               <h2 className={classes.fashion}> Explore Brand <br />New Fashion Clothes</h2>
               <p className={classes.more}>Shop the new Spring-Summer 2021 collection now available on Next store.com <br />and discover the latest selection of ready-to-wear and accessories .</p>
               <div className={classes.button}>
@@ -104,7 +103,7 @@ export default function Home({homedata}) {
                 <a href="./bag">Shop Now</a>
               </Button>
               </div>
-            </div>
+            </Paper>
           </Grid>
         </Grid>
       </div>
@@ -155,7 +154,7 @@ export default function Home({homedata}) {
                                 isFavorite={item.isFavorite} 
                                 image={item.image} 
                                 title={item.title} 
-                                price={item.price} 
+                                price={`${item.price}$`} 
                                 onclick={()=>addCart(item)} 
                                 onclick1={()=>addFavorite(item)} />
                         </Grid>

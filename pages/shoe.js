@@ -20,6 +20,7 @@ export async function getStaticProps() {
   }
 
 export default function Bag({shoedata}){
+  console.log(shoedata)
     const {addToast}=useToasts()
     useEffect(() =>{
         document.title=" Shoes || Next Store";

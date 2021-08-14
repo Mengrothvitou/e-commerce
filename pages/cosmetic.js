@@ -10,7 +10,7 @@ import {SearchContext} from './../context/SearchContext'
 import {useToasts} from 'react-toast-notifications'
 import Grid from '@material-ui/core/Grid';
 export async function getStaticProps() {
-    const cosmetic = await fetch('http://localhost:8000/api/products?type=Cosmetics')
+    const cosmetic = await fetch('http://localhost:8000/api/products?type=Cosmetic')
     const cosmeticdata = await cosmetic.json()
     return {
       
@@ -68,7 +68,7 @@ export default function Bag({cosmeticdata}){
                                 isFavorite={item.isFavorite} 
                                 image={item.image} 
                                 title={item.title} 
-                                price={item.price} 
+                                price={`${item.price}$`} 
                                 onclick={()=>addCart(item)} 
                                 onclick1={()=>addFavorite(item)} />
                         </Grid>
