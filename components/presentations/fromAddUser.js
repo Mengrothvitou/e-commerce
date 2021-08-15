@@ -91,6 +91,7 @@ export default function AddUser() {
         .then((res)=>{
             fileRef.getDownloadURL()
             .then((res)=>{
+                console.log(res)
                 fetch('http://localhost:8000/api/users', {
                     method: 'post',
                     headers: { 'Content-Type': 'application/json' },

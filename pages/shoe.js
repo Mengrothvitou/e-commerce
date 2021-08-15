@@ -68,7 +68,7 @@ export default function Bag({shoedata}){
                                 isFavorite={item.isFavorite} 
                                 image={item.image} 
                                 title={item.title} 
-                                price={item.price} 
+                                price={`${item.price}$`} 
                                 onclick={()=>addCart(item)} 
                                 onclick1={()=>addFavorite(item)} />
                         </Grid>

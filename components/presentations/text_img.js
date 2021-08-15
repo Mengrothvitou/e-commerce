@@ -55,7 +55,7 @@ export default function TextImage({ image,title,price,onclick,onclick1,isFavorit
                 <Typography style={{fontWeight:'bold',fontSize: 24,textAlign: 'center',color: 'black',fontFamily: 'Calibri'}} variant="h5" align="center" component="h2">
                     {title}
                 </Typography>
-                <Typography style={{fontWeight:'bold',fontSize: 20,color: 'red',textAlign: 'center',fontFamily: 'Calibri'}} variant="h5" align="center" component="h2" className={classes.ContentPrice}>
+                <Typography style={{fontWeight:'bold',fontSize: 20,color: 'red',textAlign: 'center',fontFamily: 'Calibri'}} variant="h5" align="center" component="h2" >
                     {price}
                 </Typography>
             </CardContent>
