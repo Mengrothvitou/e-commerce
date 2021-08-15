@@ -17,10 +17,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   media: {
-    height: 100,
+    height: 300,
     width: '100%',
-    paddingTop: "56.25%", // 16:9
-    position:'relative',
   },
   btn:{
       justifyContent: 'center',
