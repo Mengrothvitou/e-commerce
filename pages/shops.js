@@ -58,7 +58,7 @@ const Shop =() =>{
                             <TextImage 
                                 image={shop.image} 
                                 title={shop.title} 
-                                price={shop.price}  />
+                                price={`${shop.price}$`}  />
                         </Grid>
                         )
 
@@ -66,7 +66,7 @@ const Shop =() =>{
                   }
                 </Grid>
                    <div style={container}>
-                       {cards.length>0 ?(<span style={price}>Your total price: {Totals}</span>):(<span style={price}>Your cart is empty</span>)}
+                       {cards.length>0 ?(<span style={price}>Your total price: {`${Totals}$`}</span>):(<span style={price}>Your cart is empty</span>)}
                    </div>
                    <div style={container}>
                             <button style={btn} onClick={Order}>Order</button>
